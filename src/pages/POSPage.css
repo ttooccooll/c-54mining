@@ -1,0 +1,16 @@
+.shop {
+    border-radius: 5px;
+    border: black;
+    border-width: 100px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+@media screen and (max-width: 760px) {
+    .container {
+      text-align: center;
+      padding: 5px 2px;
+      margin: 5px auto;
+      max-width: 100%;
+    }
+  }
