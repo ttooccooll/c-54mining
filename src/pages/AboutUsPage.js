@@ -15,7 +15,7 @@ const AboutUsPage = () => {
       <div className='about'></div>
       <div className='about2'>
         <h1 className='a1'>Why Mine Bitcoin?</h1>
-        <p className='a1'>From the summer 1948 to the fall of 1949, one of the most unbelievable humanitarian missions of the 20th century was executed.</p>
+        <p className='a1'>From the summer of 1948 to the fall of 1949, one of the most unbelievable humanitarian missions of the 20th century was executed.</p>
         <p className='a1'>Almost 100 million miles of air travel was executed (mostly by C-47 and C-54 transports) to provide food for the starving citizens of West Berlin. It was a risky and costly venture, but saved countless lives and was an entirely peaceful mission.</p>
         <p className='a1'>Four years prior to the blockade that inspired the airlift, the Bretton Woods Accord created the International Monetary Fund. Among other things, one of the tasks of this organization was the rebuilding of the same German economy which was the site of the airlift.</p>
         <p className='a1'>In the latter half of the 20th century, the IMF has become a predatory lender, often times creating and fueling crises in the Global South far more bleak than the Berlin Blockade.</p>
