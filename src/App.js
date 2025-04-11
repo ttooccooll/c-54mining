@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import Nano3Page from './pages/Nano3Page';
 import AboutUsPage from './pages/AboutUsPage';
 import ContactPage from './pages/ContactPage';
+import FunPage from './pages/FunPage';
 import BlogPage from './pages/BlogPage';
 import POSPage from './pages/POSPage';
 
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/nano3" element={<Nano3Page />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/fun" element={<FunPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/pos" element={<POSPage />} />
         </Routes>

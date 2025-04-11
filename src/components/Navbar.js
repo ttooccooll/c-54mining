@@ -87,6 +87,15 @@ const Navbar = () => {
               Contact
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/fun"
+              className={({ isActive }) => (isActive ? 'navbar-link active' : 'navbar-link')}
+              onClick={playAudio}
+            >
+              Fun
+            </NavLink>
+          </li>
         </ul>
         <div className="navbar-slide" ref={activeLinkRef}></div>
       </div>
