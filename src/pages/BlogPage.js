@@ -13,7 +13,7 @@ const BlogPage = () => {
   return (
     <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
       <h1 className='blog'>Blog</h1>
-      <p className='blog'>Read our latest articles about freedom tech.</p>
+      <p className='blog'>Read the latest articles about freedom tech.</p>
     </div>
   );
 };
