@@ -17,13 +17,13 @@ const Nano3Page = () => {
       <img src='/assets/nano3 1.jpg' alt='pic missing!' height='400' style={{ borderRadius: '10px', margin: '5px' }} />
       <p>The Avalon Nano 3 is a small heater which runs a maximum hashrate of 4Th/s at a power consumption of 140W. It emits a mild amount of heat. This is a used unit and the fans are a little louder than they used to be. Otherwise, it works perfectly.</p>
       <p>Price includes shipping and handling within the United States. This listing is not currently available outside of the US.</p>
-      <a href='/shop' target='_blank'>Pick one up in the SHOP.</a>
+      <a href='/pos' target='_blank'>Pick one up in the SHOP.</a>
       <br/>
       <img src='/assets/nano3 2.jpg' alt='pic missing!' width='400' style={{ borderRadius: '10px', margin: '5px' }} />
       <img src='/assets/nano3 3.jpg' alt='pic missing!' width='400' style={{ borderRadius: '10px', margin: '5px' }} />
       <img src='/assets/nano3 4.jpg' alt='pic missing!' width='400' style={{ borderRadius: '10px', margin: '5px' }} />
       <br/>
-      <a href='/shop' target='_blank'>Pick one up in the SHOP.</a>
+      <a href='/pos' target='_blank'>Pick one up in the SHOP.</a>
     </div>
   );
 };
