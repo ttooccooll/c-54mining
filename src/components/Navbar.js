@@ -31,7 +31,7 @@ const Navbar = () => {
     <nav className="navbar">
       <audio ref={audioRef} src="/assets/flyover.mp3"></audio>
       <div className="navbar-container">
-        <h1 className="navbar-logo">C-54 Mining</h1>
+        <h1 className="navbar-logo">C-54 HomeTech</h1>
         <ul className="navbar-links" ref={navRef}>
           <li>
             <NavLink

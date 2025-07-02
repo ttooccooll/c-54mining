@@ -20,11 +20,12 @@
 }
 
 .a1 {
-  color: #003366;
+  color:rgb(0, 36, 72);
+  margin: 2%;
 }
 
 p.a1 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .about::before {

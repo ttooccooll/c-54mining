@@ -16,6 +16,9 @@ const FunPage = () => {
       <p className='fun'>Here's some fun stuff to play with.</p>
       <ul>
         <li>
+            <a className='fun' href='https://bitcoinisforcriminals.com/' target='none'>a PSA for all bitcoiners</a>
+        </li>
+        <li>
             <a className='fun' href='http://bitcoin-defcon.vercel.app/' target='none'>a goofy way to check how fast the Bitcoin network is currently processing transactions</a>
         </li>
         <li>
