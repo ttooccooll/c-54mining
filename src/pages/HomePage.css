@@ -40,22 +40,25 @@ p {
 }
 
 @media screen and (max-width: 760px) {
+  h1 {
+    font-size: medium;
+  }
   .container {
     text-align: center;
     padding: 5px 2px;
     margin: 5px auto;
     max-width: 100%;
-    }
-    p {
-      font-size: 1rem;
-      margin-bottom: 4px;
-    }
-    #q {
-      bottom: 20%;
-      right: 10%;
-      font-size: 1rem;
-    }
-    .quote, quote.fade-in {
-      max-width: 100vw;
-    }  
+  }
+  p {
+    font-size: small;
+    margin-bottom: 4px;
+  }
+  #q {
+    bottom: 10%;
+    right: 10%;
+    font-size: .5rem;
+  }
+  .quote, quote.fade-in {
+    max-width: 100vw;
+  }  
 }
