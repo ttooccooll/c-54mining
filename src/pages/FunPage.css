@@ -26,11 +26,28 @@
     opacity: 1;
   }
 
+  ul {
+    list-style: square;
+    color: white;
+    font-size: large;
+  }
+
+  li {
+    background-color: #003366;
+    padding: 4px;
+  }
+
   @media screen and (max-width: 760px) {
   .container {
     text-align: center;
     padding: 5px 2px;
     margin: 5px auto;
     max-width: 100%;
+  }
+  h1.fun {
+    font-size: medium
+  }
+  p.fun, a.fun {
+    font-size: small;
   }
 }

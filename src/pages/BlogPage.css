@@ -40,3 +40,27 @@
     border-radius: 10px;
     z-index: -1;
 }
+
+@media screen and (max-width: 760px) {
+  h1.blog {
+    font-size: medium;
+  }
+  .container {
+    text-align: center;
+    padding: 5px 2px;
+    margin: 5px auto;
+    max-width: 100%;
+  }
+  p, p.blog {
+    font-size: small;
+    margin-bottom: 4px;
+  }
+  #q {
+    bottom: 10%;
+    right: 10%;
+    font-size: .5rem;
+  }
+  .quote, quote.fade-in {
+    max-width: 100vw;
+  }  
+}

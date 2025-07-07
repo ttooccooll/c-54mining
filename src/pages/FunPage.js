@@ -18,21 +18,27 @@ const FunPage = () => {
         <li>
             <a className='fun' href='https://bitcoinisforcriminals.com/' target='none'>a PSA for all bitcoiners</a>
         </li>
+        <br/>
         <li>
             <a className='fun' href='http://bitcoin-defcon.vercel.app/' target='none'>a goofy way to check how fast the Bitcoin network is currently processing transactions</a>
         </li>
+                <br/>
         <li>
             <a className='fun' href='http://bitcoin-battleship.vercel.app/' target='none'>a silly battleship style game demonstrating the power of decentralization</a>
         </li>
+                <br/>
         <li>
             <a className='fun' href='http://bitcoin-chess.vercel.app' target='none'>a silly chess inspired game demonstrating the power of decentralization</a>
         </li>
+                <br/>
         <li>
             <a className='fun' href='https://national-debt-snake.vercel.app/' target='none'>the game of snake inspired by, and with a real time feed of the US national debt</a>
         </li>
+                <br/>
         <li>
             <a className='fun' href='https://stresswallet.vercel.app/' target='none'>check and see if you have enough bitcoin to pay off the US national debt</a>
         </li>
+                <br/>
       </ul>
     </div>
   );

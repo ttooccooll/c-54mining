@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
-import Nano3Page from './pages/Nano3Page';
-import S9Page from './pages/S9Page';
+import MinersPage from './pages/MinersPage';
 import AboutUsPage from './pages/AboutUsPage';
+import DonatePage from './pages/DonatePage';
 import ContactPage from './pages/ContactPage';
 import FunPage from './pages/FunPage';
 import BlogPage from './pages/BlogPage';
@@ -18,9 +18,9 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<HomePage />} />
-          <Route path="/s9" element={<S9Page />} />
-          <Route path="/nano3" element={<Nano3Page />} />
+          <Route path="/miners" element={<MinersPage />} />
           <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/donate" element={<DonatePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/fun" element={<FunPage />} />
           <Route path="/blog" element={<BlogPage />} />

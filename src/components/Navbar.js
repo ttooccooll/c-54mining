@@ -48,7 +48,7 @@ const Navbar = () => {
               className={({ isActive }) => (isActive ? 'navbar-link active' : 'navbar-link')}
               onClick={playAudio}
             >
-              About Us
+              About
             </NavLink>
           </li>
           <li>
@@ -62,29 +62,20 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/s9"
-              className={({ isActive }) => (isActive ? 'navbar-link active' : 'navbar-link')}
-              onClick={playAudio}
-            >
-              S9
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/nano3"
-              className={({ isActive }) => (isActive ? 'navbar-link active' : 'navbar-link')}
-              onClick={playAudio}
-            >
-              Nano 3
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/pos"
               className={({ isActive }) => (isActive ? 'navbar-link active' : 'navbar-link')}
               onClick={playAudio}
             >
               Shop
+            </NavLink>
+          </li>
+                    <li>
+            <NavLink
+              to="/donate"
+              className={({ isActive }) => (isActive ? 'navbar-link active' : 'navbar-link')}
+              onClick={playAudio}
+            >
+              Donate
             </NavLink>
           </li>
           <li>
