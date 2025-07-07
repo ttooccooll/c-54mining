@@ -20,7 +20,7 @@ const BlogPage = () => {
         className='curriculum'
         title="curriculum"
         view='FitH'
-        allowFullScreen
+        allow='fullscreen'
       ></iframe>
       <br/>
       <h1 className='blog'>Some Helpful Videos</h1>
