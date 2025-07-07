@@ -19,7 +19,7 @@ const BlogPage = () => {
         src='/assets/Curriculum.pdf'
         className='curriculum'
         title="curriculum"
-        style={{ objectFit: 'scale-down' }}
+        view='FitH'
         allowFullScreen
       ></iframe>
       <br/>
