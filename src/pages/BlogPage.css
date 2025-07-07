@@ -43,9 +43,9 @@
 
 .curriculum {
   max-width: 100%;
-  width: 50vw;
-  height: 90vw;
+  width: 80vw;
   border-radius: 10px;
+  content-visibility: contain;
 }
 
 @media screen and (max-width: 760px) {
@@ -72,6 +72,5 @@
   }  
   .curriculum {
     width: 85vw;
-    height: 90vw;
   }
 }

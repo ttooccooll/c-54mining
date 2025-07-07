@@ -15,13 +15,12 @@ const BlogPage = () => {
       <h1 className='blog'>Be part of the revolution</h1>
       <p>The following curriculum is meant to be reproducable for anyone hoping to teach bitcoin mining, heat recycling, and home automation.</p>
       <p>These skills lay the groundwork for further decentralizing the network and building renewable energy infrastructure in diverse communities. Lesson plans and other classroom resources should follow soon.</p>
-      <iframe      
-        src='/assets/Curriculum.pdf'
+      <img
+        src='/assets/Curriculum/Curriculum.1.jpeg'
         className='curriculum'
         title="curriculum"
-        view='Fit'
-        allow='fullscreen'
-      ></iframe>
+        alt="Curriculum"
+      />
       <br/>
       <h1 className='blog'>Some Helpful Videos</h1>
       <p>!!! Note that all of these videos are currently FILLER MATERIAL and were not made by. Please don't use these as your instruction yet. I have not even watched most of them. !!!</p>
