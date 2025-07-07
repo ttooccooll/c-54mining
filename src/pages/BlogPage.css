@@ -71,8 +71,7 @@
     max-width: 100vw;
   }  
   .curriculum {
-    width: 100%;
+    width: 85vw;
     height: 90vw;
-    overflow: scroll;
   }
 }
