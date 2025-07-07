@@ -19,7 +19,7 @@ const BlogPage = () => {
         src='/assets/Curriculum.pdf'
         className='curriculum'
         title="curriculum"
-        style={{ objectFit: 'contain' }}
+        style={{ objectFit: 'scale-down' }}
       ></iframe>
       <br/>
       <h1 className='blog'>Some Helpful Videos</h1>
