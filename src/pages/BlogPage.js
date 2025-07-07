@@ -19,7 +19,7 @@ const BlogPage = () => {
         src='/assets/Curriculum.pdf'
         className='curriculum'
         title="curriculum"
-        view='FitH'
+        view='Fit'
         allow='fullscreen'
       ></iframe>
       <br/>
