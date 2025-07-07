@@ -18,7 +18,7 @@ const BlogPage = () => {
       <iframe      
         src='/assets/Curriculum.pdf'
         className='curriculum'
-        title="setup"
+        title="curriculum"
       ></iframe>
       <br/>
       <h1 className='blog'>Some Helpful Videos</h1>
