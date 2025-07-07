@@ -20,6 +20,7 @@ const BlogPage = () => {
         className='curriculum'
         title="curriculum"
         style={{ objectFit: 'scale-down' }}
+        allowFullScreen
       ></iframe>
       <br/>
       <h1 className='blog'>Some Helpful Videos</h1>
