@@ -44,7 +44,7 @@
 .curriculum {
   max-width: 100%;
   width: 50vw;
-  height: 45vw;
+  height: auto;
   border-radius: 10px; 
   object-fit: scale-down;
 }
@@ -73,6 +73,5 @@
   }  
   .curriculum {
     width: 85vw;
-    height: 90vw;
   }
 }
