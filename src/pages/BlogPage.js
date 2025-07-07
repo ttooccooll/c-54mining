@@ -22,7 +22,7 @@ const BlogPage = () => {
       ></iframe>
       <br/>
       <h1 className='blog'>Some Helpful Videos</h1>
-      <p className='redalert'>Note that all of these videos are currently fillers and were not made by. Please don't use these as your instruction yet. I have not even watched most of them.</p>
+      <p>!!! Note that all of these videos are currently FILLER MATERIAL and were not made by. Please don't use these as your instruction yet. I have not even watched most of them. !!!</p>
         <h2 className='blog'>Mine Bitcoin</h2>
           <div className='bloggy'>
             <div className='blue'>
