@@ -17,7 +17,7 @@ const BlogPage = () => {
       <p>These skills lay the groundwork for further decentralizing the network and building renewable energy infrastructure in diverse communities. Lesson plans and other classroom resources should follow soon.</p>
       <iframe      
         src='/assets/Curriculum.pdf'
-        style={{ maxWidth: '100%', width: '50vw', height: '45vw', borderRadius: '10px' }} 
+        className='curriculum'
         title="setup"
       ></iframe>
       <br/>

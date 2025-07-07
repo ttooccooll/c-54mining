@@ -41,6 +41,13 @@
     z-index: -1;
 }
 
+.curriculum {
+  max-width: '100%';
+  width: '50vw';
+  height: '45vw';
+  border-radius: '10px'; 
+}
+
 @media screen and (max-width: 760px) {
   h1.blog {
     font-size: medium;
@@ -63,4 +70,8 @@
   .quote, quote.fade-in {
     max-width: 100vw;
   }  
+  .curriculum {
+    width: '75vw';
+    height: '90vw';
+  }
 }
