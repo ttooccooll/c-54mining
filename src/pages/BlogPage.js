@@ -13,13 +13,13 @@ const BlogPage = () => {
   return (
     <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
       <h1 className='blog'>Be part of the revolution</h1>
-      <p>The following curriculum is meant to be reproducable for anyone hoping to teach bitcoin mining, heat recycling, and home automation.</p>
+      <p>The following syllabus is meant to be reproducable for anyone hoping to teach bitcoin mining, heat recycling, and home automation.</p>
       <p>These skills lay the groundwork for further decentralizing the network and building renewable energy infrastructure in diverse communities. Lesson plans and other classroom resources should follow soon.</p>
       <img
-        src='/assets/Curriculum/Curriculum.1.jpeg'
-        className='curriculum'
-        title="curriculum"
-        alt="Curriculum"
+        src='/assets/Syllabus/Syllabus.1.jpeg'
+        className='syllabus'
+        title="syllabus"
+        alt="Syllabus"
       />
       <br/>
       <h1 className='blog'>Some Helpful Videos</h1>
