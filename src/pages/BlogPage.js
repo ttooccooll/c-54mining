@@ -21,6 +21,12 @@ const BlogPage = () => {
         title="syllabus"
         alt="Syllabus"
       />
+      <img
+        src='/assets/Syllabus/Syllabus.2.jpeg'
+        className='syllabus'
+        title="syllabus"
+        alt="Syllabus"
+      />
       <br/>
       <h1 className='blog'>Some Helpful Videos</h1>
       <p>!!! Note that all of these videos are currently FILLER MATERIAL and were not made by me. I don't even necessarily endourse them. I just wanted to put something here while I'm making this website. Please don't use these as your instruction yet. I have not even watched most of them. !!!</p>
