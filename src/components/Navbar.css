@@ -52,7 +52,8 @@
   .navbar-slide {
     border-radius: 5px;
     position: absolute;
-    height: 31px;
+    transform: translateY(1px);
+    height: 30px;
     border-radius: 5px;
     background-color: #D3D3D3;
     transition: left 2.3s, width 2.3s;
