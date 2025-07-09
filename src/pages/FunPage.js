@@ -39,6 +39,10 @@ const FunPage = () => {
             <a className='fun' href='https://stresswallet.vercel.app/' target='none'>check and see if you have enough bitcoin to pay off the US national debt</a>
         </li>
                 <br/>
+        <li>
+            <a className='fun' href='https://piggysats-webln.vercel.app/' target='none'>view your browser extension wallet as a piggy bank and accept payments</a>
+        </li>
+                <br/>
       </ul>
     </div>
   );
