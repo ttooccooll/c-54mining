@@ -12,7 +12,7 @@ const POSPage = () => {
   }, []);
 
   return (
-    <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
+    <div style={{ padding: '15px' }} className='quote' ref={quoteRef}>
       <POS />
     </div>
   );
