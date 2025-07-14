@@ -28,6 +28,21 @@ const BlogPage = () => {
         alt="Syllabus"
       />
       <br/>
+      <p>The following outline can be used as a template for presenting bitcoin mining to solar installation companies. Soon this should have accompanying power point slides and a small glossary of basic mining terminology.</p>
+      <p>Ideally, local solar installers should be educated on the benefits of having a bitcoin mining department or referral options at the same time as local bitcoiners are educated on providing these services.</p>
+      <img
+        src='/assets/Solar/Solar.1.jpeg'
+        className='solar'
+        title="solar"
+        alt="Solar"
+      />
+      <img
+        src='/assets/Solar/Solar.2.jpeg'
+        className='solar'
+        title="solar"
+        alt="Solar"
+      />
+      <br/>
       <h1 className='blog'>Some Helpful Videos</h1>
       <p>!!! Note that all of these videos are currently FILLER MATERIAL and were not made by me. I don't even necessarily endourse them. I just wanted to put something here while I'm making this website. Please don't use these as your instruction yet. I have not even watched most of them. !!!</p>
         <h2 className='blog'>Mine Bitcoin</h2>
