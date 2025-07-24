@@ -32,13 +32,13 @@ const BlogPage = () => {
       <p>Ideally, local solar installers should be educated on the benefits of having a bitcoin mining department or referral options at the same time as local bitcoiners are educated on providing these services.</p>
       <img
         src='/assets/Solar/Solar.1.jpeg'
-        className='solar'
+        className='syllabus'
         title="solar"
         alt="Solar"
       />
       <img
         src='/assets/Solar/Solar.2.jpeg'
-        className='solar'
+        className='syllabus'
         title="solar"
         alt="Solar"
       />
