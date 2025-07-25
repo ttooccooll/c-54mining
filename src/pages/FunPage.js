@@ -13,7 +13,7 @@ const FunPage = () => {
   return (
     <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
       <h1 className='fun'>goofy learning tools and (loosly) educational games</h1>
-      <p className='fun'>Here's some fun stuff to play with.</p>
+      <p className='fun'>Here is some fun stuff to play with.</p>
       <ul>
         <li>
             <a className='fun' href='https://bitcoinisforcriminals.com/' target='none'>a PSA for all bitcoiners</a>
