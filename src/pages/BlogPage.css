@@ -16,6 +16,24 @@
     margin-left: 2%;
   }
 
+  li {
+    background: none;
+    list-style: none;
+  }
+
+  .blue::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #003366;
+    opacity: 0.5;
+    border-radius: 10px;
+    z-index: -1;
+}
+
   .bloggy {
     display: flex;
     flex-direction: row;
