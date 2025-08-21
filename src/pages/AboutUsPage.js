@@ -21,7 +21,7 @@ const AboutUsPage = () => {
         <p className='a1'>In the latter half of the 20th century, the IMF has become a predatory lender, often times creating and fueling crises in the Global South far more bleak than that of East Berlin.</p>
         <p className='a1'>For the past 16 years, the Bitcoin network has grown as a lifeline to victims living in countries targeted by the IMF worldwide.</p>
         <p className='a1'>Whereas victims in the Weimar Republic were robbed of their savings, people with bitcoin can live stable lives. Whereas victims of the Nazis fled with nothing or died, people with bitcoin can cross borders with their former earnings. Whereas victims of the Soviets starved or were killed, people with bitcoin are fed.</p>
-        <p className='a1'>By securing the bitcoin network in a decentralized manner, you become a part of this movement. It is a movement that already has thousands of heroic tales. It has saved countless lives. It is entirely peaceful, and anyone, anywhere can contribute.</p>
+        <p className='a1'>By securing the bitcoin network in a decentralized manner, you become a part of this movement. It is a movement that already has thousands of heroic tales. It has saved countless lives. Like the Berlin Airlift, it is entirely peaceful. Unlike the Berlin Airlift, anyone, anywhere in the world can contribute.</p>
         <p className='a1'>By running a local smart home, which never touches the internet, you can privately heat your home or utilize excess solar power while making this network more robust and secure.</p>
         <p className='a1'></p>
       </div>
