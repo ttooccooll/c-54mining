@@ -28,6 +28,7 @@ const BlogPage = () => {
         alt="Syllabus"
       />
       <br/>
+      <h1 className='blog'>Do you work in the solar industry?</h1>
       <p>The following outline can be used as a template for presenting bitcoin mining to solar installation companies. Soon this should have accompanying power point slides and a small glossary of basic mining terminology.</p>
       <p>Ideally, local solar installers should be educated on the benefits of having a bitcoin mining department or referral options at the same time as local bitcoiners are educated on providing these services.</p>
       <img
@@ -118,6 +119,31 @@ const BlogPage = () => {
               <p className='blog'>Solar Forecasting</p>
             </div>
           </div>
+      <h1 className='blog'>Home Bitcoin Mining, the Real Solar Boom, and National Security</h1>
+      <img
+        src='/assets/Home Bitcoin Mining, the Real Solar Boom, and National Security/Home Bitcoin Mining, the Real Solar Boom, and National Security.1.jpeg'
+        className='syllabus'
+        title="solar"
+        alt="Solar"
+      />
+      <img
+        src='/assets/Home Bitcoin Mining, the Real Solar Boom, and National Security/Home Bitcoin Mining, the Real Solar Boom, and National Security.2.jpeg'
+        className='syllabus'
+        title="solar"
+        alt="Solar"
+      />
+            <img
+        src='/assets/Home Bitcoin Mining, the Real Solar Boom, and National Security/Home Bitcoin Mining, the Real Solar Boom, and National Security.3.jpeg'
+        className='syllabus'
+        title="solar"
+        alt="Solar"
+      />
+            <img
+        src='/assets/Home Bitcoin Mining, the Real Solar Boom, and National Security/Home Bitcoin Mining, the Real Solar Boom, and National Security.4.jpeg'
+        className='syllabus'
+        title="solar"
+        alt="Solar"
+      />
     </div>
   );
 };
