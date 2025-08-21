@@ -132,14 +132,20 @@ const BlogPage = () => {
         title="solar"
         alt="Solar"
       />
-            <img
+      <img
         src='/assets/Home Bitcoin Mining, the Real Solar Boom, and National Security/Home Bitcoin Mining, the Real Solar Boom, and National Security.3.jpeg'
         className='syllabus'
         title="solar"
         alt="Solar"
       />
-            <img
+      <img
         src='/assets/Home Bitcoin Mining, the Real Solar Boom, and National Security/Home Bitcoin Mining, the Real Solar Boom, and National Security.4.jpeg'
+        className='syllabus'
+        title="solar"
+        alt="Solar"
+      />
+      <img
+        src='/assets/Home Bitcoin Mining, the Real Solar Boom, and National Security/Home Bitcoin Mining, the Real Solar Boom, and National Security.5.jpeg'
         className='syllabus'
         title="solar"
         alt="Solar"
