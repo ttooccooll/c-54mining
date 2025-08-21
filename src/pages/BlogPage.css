@@ -67,7 +67,7 @@
 }
 
 @media screen and (max-width: 760px) {
-  h1.blog {
+  h1.blog, h1 {
     font-size: medium;
   }
   .container {
@@ -76,7 +76,7 @@
     margin: 5px auto;
     max-width: 100%;
   }
-  p, p.blog {
+  p, p.blog, li {
     font-size: small;
     margin-bottom: 4px;
   }
