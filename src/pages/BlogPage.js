@@ -17,7 +17,7 @@ const BlogPage = () => {
           <h1>Index</h1>
           <li><a href="#revolution">Be part of the revolution</a></li>
           <li><a href="#solar">Info for solar installers</a></li>
-          <li><a href="#videos">Some Helpful Videos</a></li>
+          <li><a href="#videos">Videos</a></li>
           <li><a href="#security">Home Bitcoin Mining, the Real Solar Boom, and National Security</a></li>
         </ul>
       </nav>
