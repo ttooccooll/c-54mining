@@ -21,7 +21,7 @@ const BlogPage = () => {
           <li><a href="#security">Home Bitcoin Mining, the Real Solar Boom, and National Security</a></li>
         </ul>
       </nav>
-      <h1 id="revolution" className='blog'>Be part of the revolution</h1>
+      <h1 id="revolution" className='blog'>Be part of the revolution!</h1>
       <p>The following syllabus is meant to be reproducible for anyone hoping to teach bitcoin mining, heat recycling, and home automation.</p>
       <p>These skills lay the groundwork for further decentralizing the network and building renewable energy infrastructure in diverse communities. Lesson plans and other classroom resources should follow soon.</p>
       <img
