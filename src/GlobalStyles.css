@@ -6,12 +6,6 @@ body {
   z-index: 0;
 }
 
-.redalert {
-  color: red;
-  background-color: #003366;
-  border-radius: 10px;
-}
-
 .background-container {
   position: fixed;
   top: 0;
@@ -62,33 +56,15 @@ body {
     margin: 0 auto;
   }
 
-  .fade-enter {
-    opacity: 0;
-  }
-  
-  .fade-enter-active {
-    opacity: 1;
-    transition: opacity 300ms;
-  }
-  
-  .fade-exit {
-    opacity: 1;
-  }
-  
-  .fade-exit-active {
-    opacity: 0;
-    transition: opacity 300ms;
-  }
-
   @media screen and (max-width: 760px) {
     body {
       max-width: 100vw;
     }
     h1, h2, h3, h4, h5, h6 {
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
     .container {
-      padding: 20px;
+      padding: 15px 10px;
       max-width: 100%;
     }  
     .background-container {
