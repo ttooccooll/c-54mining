@@ -19,13 +19,13 @@ const FunPage = () => {
           <a className='fun' href='https://bitcoinisforcriminals.com/' target='_blank' rel='noopener noreferrer'>a PSA for all bitcoiners</a>
         </div>
         <div className='fun-card'>
-          <a className='fun' href='http://bitcoin-defcon.vercel.app/' target='_blank' rel='noopener noreferrer'>a goofy way to check how fast the Bitcoin network is currently processing transactions</a>
+          <a className='fun' href='https://bitcoin-defcon.vercel.app/' target='_blank' rel='noopener noreferrer'>a goofy way to check how fast the Bitcoin network is currently processing transactions</a>
         </div>
         <div className='fun-card'>
-          <a className='fun' href='http://bitcoin-battleship.vercel.app/' target='_blank' rel='noopener noreferrer'>a silly battleship style game demonstrating the power of decentralization</a>
+          <a className='fun' href='https://bitcoin-battleship.vercel.app/' target='_blank' rel='noopener noreferrer'>a silly battleship style game demonstrating the power of decentralization</a>
         </div>
         <div className='fun-card'>
-          <a className='fun' href='http://bitcoin-chess.vercel.app' target='_blank' rel='noopener noreferrer'>a silly chess inspired game demonstrating the power of decentralization</a>
+          <a className='fun' href='https://bitcoin-chess.vercel.app' target='_blank' rel='noopener noreferrer'>a silly chess inspired game demonstrating the power of decentralization</a>
         </div>
         <div className='fun-card'>
           <a className='fun' href='https://national-debt-snake.vercel.app/' target='_blank' rel='noopener noreferrer'>the game of snake inspired by, and with a real time feed of the US national debt</a>
