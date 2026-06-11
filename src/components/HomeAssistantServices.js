@@ -15,7 +15,7 @@ const HomeAssistantServices = () => {
           <p className="ha-price">$200</p>
           <ul className="ha-features">
             <li>Home Assistant installation on your hardware</li>
-            <li>Basic device integration (5 devices)</li>
+            <li>Basic device integration (3 devices)</li>
             <li>Remote access setup (optional)</li>
             <li>30-minute training session</li>
           </ul>
@@ -27,7 +27,7 @@ const HomeAssistantServices = () => {
           <p className="ha-price">$400</p>
           <ul className="ha-features">
             <li>Everything in Basic</li>
-            <li>Up to 15 devices integrated</li>
+            <li>Up to 10 devices integrated</li>
             <li>Basic automations (lighting schedules, etc.)</li>
             <li>Dashboard customization</li>
             <li>1-hour training session</li>
@@ -40,7 +40,7 @@ const HomeAssistantServices = () => {
           <p className="ha-price">$700</p>
           <ul className="ha-features">
             <li>Everything in Standard</li>
-            <li>Up to 30 devices integrated</li>
+            <li>Up to 15 devices integrated</li>
             <li>Advanced automations & scripts</li>
             <li>Energy monitoring & dashboards</li>
             <li>Bitcoin miner integration</li>
