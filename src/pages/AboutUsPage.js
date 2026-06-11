@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './AboutUsPage.css';
 
 const AboutUsPage = () => {
@@ -11,7 +12,12 @@ const AboutUsPage = () => {
   }, []);
 
   return (
-    <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
+    <>
+      <Helmet>
+        <title>About | C-54 HomeTech</title>
+        <meta name="description" content="Learn about C-54 HomeTech - our mission to bring Bitcoin mining, heat, and home automation for financial sovereignty." />
+      </Helmet>
+      <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
       <div className='about'></div>
       <div className='about2'>
         <h1 className='a1'>Why Mine Bitcoin?</h1>
@@ -25,6 +31,7 @@ const AboutUsPage = () => {
         <p className='a1'>We also offer Home Assistant installation services to help you take control of your home automation without sacrificing privacy. Your data stays in your home, not in the cloud. Combined with Bitcoin mining heat, this gives you true energy independence. Your home now works for you, not for corporations or governments. Whether you're looking to heat your space with purpose or build a self-sovereign home, we're here to help you get there.</p>
       </div>
     </div>
+    </>
   );
 };
 

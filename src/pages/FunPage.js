@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './FunPage.css';
 
 const FunPage = () => {  
@@ -11,7 +12,12 @@ const FunPage = () => {
   }, []);
 
   return (
-    <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
+    <>
+      <Helmet>
+        <title>Fun | C-54 HomeTech</title>
+        <meta name="description" content="Fun Bitcoin learning tools and educational games. Explore the power of decentralization with interactive experiences." />
+      </Helmet>
+      <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
       <h1 className='fun'>goofy learning tools and (loosly) educational games</h1>
       <p className='fun'>Here is some fun stuff to play with.</p>
       <div className='fun-links'>
@@ -41,6 +47,7 @@ const FunPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

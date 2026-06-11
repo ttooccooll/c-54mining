@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://c-54hometech.com/sitemap.xml
+Sitemap: https://c54hometech.com/sitemap.xml

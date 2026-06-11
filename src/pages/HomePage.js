@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './HomePage.css';
 
 const Home = () => {
@@ -11,7 +12,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
+    <>
+      <Helmet>
+        <title>C-54 HomeTech | Bitcoin Mining Heaters & Home Automation</title>
+        <meta name="description" content="Bitcoin mining heaters and Home Assistant installation services. Take control of your home with privacy-focused automation." />
+      </Helmet>
+      <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
       <h1 className='home'>Heating, Mining, and Home Automation</h1>
       <p className='homep'>Inspired by the Berlin Airlift, we aim to provide the tools for you to be a part of the most powerful movement of our generation. All at once, you will be enabling financial inclusion to people worldwide while providing privacy and energy independence for your loved family.</p>
       <div id='q'>
@@ -19,6 +25,7 @@ const Home = () => {
         <p className='homep'>― Alex Gladstein, Check Your Financial Privilege</p>
       </div>
     </div>
+    </>
   );
 };
 

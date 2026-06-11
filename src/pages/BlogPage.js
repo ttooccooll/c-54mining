@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './BlogPage.css';
 
 const BlogPage = () => {
@@ -11,7 +12,12 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
+    <>
+      <Helmet>
+        <title>Learn | C-54 HomeTech</title>
+        <meta name="description" content="Learn about Bitcoin mining, heat recycling, and home automation. Educational resources, syllabi, and videos for beginners." />
+      </Helmet>
+      <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
       <nav>
         <ul className='blue'>
           <h1>Index</h1>
@@ -160,6 +166,7 @@ const BlogPage = () => {
         alt="Solar"
       />
     </div>
+    </>
   );
 };
 
