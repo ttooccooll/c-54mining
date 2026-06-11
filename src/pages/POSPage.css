@@ -6,6 +6,125 @@
     padding: 20px;
 }
 
+.ha-services {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.ha-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.ha-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.ha-tiers {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.ha-tier {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 320px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ha-tier.featured {
+    border: 2px solid #f7931a;
+    background: rgba(247, 147, 26, 0.15);
+}
+
+.ha-tier h3 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+}
+
+.ha-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f7931a;
+    margin: 10px 0;
+}
+
+.ha-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.ha-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ha-features li:before {
+    content: "✓ ";
+    color: #f7931a;
+}
+
+.ha-button {
+    display: inline-block;
+    background: #f7931a;
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.ha-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.ha-info, .ha-faq {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.ha-info h3, .ha-faq h3 {
+    margin-top: 0;
+}
+
+.ha-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ha-info li {
+    padding: 10px 0;
+}
+
+.ha-faq-item {
+    margin-bottom: 20px;
+}
+
+.ha-faq-item p {
+    margin: 5px 0;
+}
+
 @media screen and (max-width: 760px) {
     .container {
       text-align: center;
@@ -13,4 +132,13 @@
       margin: 5px auto;
       max-width: 100%;
     }
-  }
+    
+    .ha-tiers {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ha-tier {
+        max-width: 100%;
+    }
+}
