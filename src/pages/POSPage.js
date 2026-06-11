@@ -22,8 +22,8 @@ const POSPage = () => {
       </Helmet>
       <div style={{ padding: '15px' }} className='quote' ref={quoteRef}>
         <HomeAssistantServices />
-        <BitcoinMinersForSale />
         <h2 style={{ marginTop: '40px' }}>Bitcoin Miners</h2>
+        <BitcoinMinersForSale />
         <POS />
       </div>
     </>
