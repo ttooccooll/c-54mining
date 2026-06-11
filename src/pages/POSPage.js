@@ -24,6 +24,7 @@ const POSPage = () => {
         <HomeAssistantServices />
         <h2 style={{ marginTop: '40px' }}>Bitcoin Miners</h2>
         <BitcoinMinersForSale />
+        <h2 style={{ marginTop: '40px' }}>Merch / Fun Stuff</h2>
         <POS />
       </div>
     </>
