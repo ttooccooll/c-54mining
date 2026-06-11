@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import MinersPage from './pages/MinersPage';
@@ -24,7 +24,8 @@ const App = () => {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/fun" element={<FunPage />} />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/pos" element={<POSPage />} />
+          <Route path="/shop" element={<POSPage />} />
+          <Route path="/pos" element={<Navigate to="/shop" replace />} />
         </Routes>
       </div>
     </Router>

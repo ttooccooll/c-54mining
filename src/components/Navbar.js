@@ -62,7 +62,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/pos"
+              to="/shop"
               className={({ isActive }) => (isActive ? 'navbar-link active' : 'navbar-link')}
               onClick={playAudio}
             >
