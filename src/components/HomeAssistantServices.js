@@ -12,19 +12,19 @@ const HomeAssistantServices = () => {
       <div className="ha-tiers">
         <div className="ha-tier">
           <h3>Basic Setup</h3>
-          <p className="ha-price">$200</p>
+          <p className="ha-price">$315</p>
           <ul className="ha-features">
             <li>Home Assistant installation on your hardware</li>
             <li>Basic device integration (3 devices)</li>
             <li>Remote access setup (optional)</li>
             <li>30-minute training session</li>
           </ul>
-          <a href="mailto:c54hometech@proton.me?subject=Home%20Assistant%20-%20Basic%20Setup&body=Name:%20%0AEmail:%20%0APhone:%20%0A%0AService%20Tier:%20Basic%20($200)%0A%0ACurrent%20Hardware%20(what%20do%20you%20have%20now?):%20%0A%0ADevices%20to%20integrate:%20%0ALocation%20(for%20scheduling):%20%0AAdditional%20notes:%20" className="ha-button">Book Now</a>
+          <a href="mailto:c54hometech@proton.me?subject=Home%20Assistant%20-%20Basic%20Setup&body=Name:%20%0AEmail:%20%0APhone:%20%0A%0AService%20Tier:%20Basic%20($315)%0A%0ACurrent%20Hardware%20(what%20do%20you%20have%20now?):%20%0A%0ADevices%20to%20integrate:%20%0ALocation%20(for%20scheduling):%20%0AAdditional%20notes:%20" className="ha-button">Book Now</a>
         </div>
 
         <div className="ha-tier">
           <h3>Standard Setup</h3>
-          <p className="ha-price">$400</p>
+          <p className="ha-price">$575</p>
           <ul className="ha-features">
             <li>Everything in Basic</li>
             <li>Up to 10 devices integrated</li>
@@ -32,12 +32,12 @@ const HomeAssistantServices = () => {
             <li>Dashboard customization</li>
             <li>1-hour training session</li>
           </ul>
-          <a href="mailto:c54hometech@proton.me?subject=Home%20Assistant%20-%20Standard%20Setup&body=Name:%20%0AEmail:%20%0APhone:%20%0A%0AService%20Tier:%20Standard%20($400)%0A%0ACurrent%20Hardware%20(what%20do%20you%20have%20now?):%20%0A%0ADevices%20to%20integrate:%20%0ALocation%20(for%20scheduling):%20%0AAdditional%20notes:%20" className="ha-button">Book Now</a>
+          <a href="mailto:c54hometech@proton.me?subject=Home%20Assistant%20-%20Standard%20Setup&body=Name:%20%0AEmail:%20%0APhone:%20%0A%0AService%20Tier:%20Standard%20($575)%0A%0ACurrent%20Hardware%20(what%20do%20you%20have%20now?):%20%0A%0ADevices%20to%20integrate:%20%0ALocation%20(for%20scheduling):%20%0AAdditional%20notes:%20" className="ha-button">Book Now</a>
         </div>
 
         <div className="ha-tier featured">
           <h3>Premium Setup</h3>
-          <p className="ha-price">$700</p>
+          <p className="ha-price">$1,050</p>
           <ul className="ha-features">
             <li>Everything in Standard</li>
             <li>Up to 15 devices integrated</li>
@@ -47,7 +47,7 @@ const HomeAssistantServices = () => {
             <li>2-hour training session</li>
             <li>30 days of basic support</li>
           </ul>
-          <a href="mailto:c54hometech@proton.me?subject=Home%20Assistant%20-%20Premium%20Setup&body=Name:%20%0AEmail:%20%0APhone:%20%0A%0AService%20Tier:%20Premium%20($700)%0A%0ACurrent%20Hardware%20(what%20do%20you%20have%20now?):%20%0A%0ADevices%20to%20integrate:%20%0ALocation%20(for%20scheduling):%20%0AAdditional%20notes:%20" className="ha-button">Book Now</a>
+          <a href="mailto:c54hometech@proton.me?subject=Home%20Assistant%20-%20Premium%20Setup&body=Name:%20%0AEmail:%20%0APhone:%20%0A%0AService%20Tier:%20Premium%20($1,050)%0A%0ACurrent%20Hardware%20(what%20do%20you%20have%20now?):%20%0A%0ADevices%20to%20integrate:%20%0ALocation%20(for%20scheduling):%20%0AAdditional%20notes:%20" className="ha-button">Book Now</a>
         </div>
       </div>
 
