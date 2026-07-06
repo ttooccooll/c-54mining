@@ -40,10 +40,10 @@ const FunPage = () => {
           <a className='fun' href='https://stresswallet.vercel.app/' target='_blank' rel='noopener noreferrer'>check and see if you have enough bitcoin to pay off the US national debt</a>
         </div>
         <div className='fun-card'>
-          <a className='fun' href='https://piggysats-webln.vercel.app/' target='_blank' rel='noopener noreferrer'>view your browser extension wallet as a piggy bank and accept payments</a>
+          <a className='fun' href='https://mempooldotspaceinvaders.space' target='_blank' rel='noopener noreferrer'>Space Invaders powered by live Bitcoin mempool data</a>
         </div>
         <div className='fun-card'>
-          <a className='fun' href='https://mempooldotspaceinvaders.space' target='_blank' rel='noopener noreferrer'>Space Invaders powered by live Bitcoin mempool data</a>
+          <a className='fun' href='https://thebitcointrail.vercel.app/' target='_blank' rel='noopener noreferrer'>the bitcoin trail - a bitcoin themed adventure game</a>
         </div>
       </div>
     </div>
