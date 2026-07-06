@@ -17,18 +17,26 @@ const AboutUsPage = () => {
         <title>About | C-54 HomeTech</title>
         <meta name="description" content="Learn about C-54 HomeTech - our mission to bring Bitcoin mining, heat, and home automation for financial sovereignty." />
       </Helmet>
-      <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
-      <div className='about'></div>
-      <div className='about2'>
-        <h1 className='a1'>Why Mine Bitcoin?</h1>
-        <p className='a1'>From the summer of 1948 to the fall of 1949, one of the most unbelievable humanitarian missions of the 20th century was executed. It was a marvel of logistics. It saved countless lives.</p>
-        <p className='a1'>Almost 100 million miles of air travel was flown (mostly by C-47 and C-54 transports) to provide food for the starving citizens of West Berlin. It was a risky and costly venture. It was an entirely peaceful mission.</p>
-        <p className='a1'>Four years prior to the blockade that inspired the airlift, the Bretton Woods Accord created the International Monetary Fund. Among other things, one of the tasks of this organization was the rebuilding of the same German economy which was the site of the airlift.</p>
-        <p className='a1'>In the latter half of the 20th century, the IMF has become a predatory lender, often times creating and fueling crises in the Global South far more bleak than that of East Berlin.</p>
-        <p className='a1'>For the past 17 years, the Bitcoin network has grown as a lifeline to victims living in countries exploited by the IMF worldwide. Whereas victims in the Weimar Republic were robbed of their savings, people with bitcoin live stable lives. Whereas victims of the Nazis fled with nothing or died, people with bitcoin can cross border every day from war-torn regions with their former earnings. Whereas victims of the Soviets starved or were killed, people with bitcoin are fed.</p>
-        <p className='a1'>By securing the bitcoin network in a decentralized manner, you become a part of this movement. It is a movement that already has thousands of heroic tales. It has saved countless lives. Like the Berlin Airlift, it is entirely peaceful. Unlike the Berlin Airlift, anyone, anywhere in the world can contribute.</p>
-        <p className='a1'>By running a local smart home, which never touches the internet, you can privately heat your home or utilize excess solar power while making this network more robust and secure. Using Bitcoin miners as heaters is more than a novelty. It is a statement that energy can be productive, that waste can be value, and that individuals can opt out of failing financial systems.</p>
-        <p className='a1'>We also offer Home Assistant installation services to help you take control of your home automation without sacrificing privacy. Your data stays in your home, not in the cloud. Combined with Bitcoin mining heat, this gives you true energy independence. Your home now works for you, not for corporations or governments. Whether you're looking to heat your space with purpose or build a self-sovereign home, we're here to help you get there.</p>
+      <div className='quote' ref={quoteRef}>
+      <div className='about'>
+        <div className='about2'>
+          <h1 className='a1'>C-54 HomeTech</h1>
+          <p className='a1'>We do private, local Home Assistant installations. Your data stays off the cloud and in your hands. We also sell Bitcoin mining hardware configured as space heaters. Heat your home, use your excess energy, and secure the Bitcoin network while you're at it.</p>
+
+          <h1 className='a1'>What We Do</h1>
+          <p className='a1'>Private home automation: We install Home Assistant locally so your smart home runs without needing the internet. Your data never leaves your property. Pair that with mining heat and your home works for you, not for some corporation.</p>
+          <p className='a1'>Bitcoin miners as heaters: Every watt a miner draws becomes heat. Instead of venting that into a data center somewhere, put it in your living room, garage, or workshop. You offset your heating costs while earning bitcoin.</p>
+
+          <h1 className='a1'>Why It Matters</h1>
+          <p className='a1'>From the summer of 1948 to the fall of 1949, C-47 and C-54 transports flew almost 100 million miles to feed the starving citizens of West Berlin. It was one of the greatest humanitarian missions of the 20th century. Is was risky, costly, confrontational, and entirely peaceful.</p>
+          <p className='a1'>Four years earlier, the Bretton Woods Accord created the International Monetary Fund, tasked in part with rebuilding the German economy. In the decades since, the IMF has become a predatory lender, fueling crises in the Global South far more bleak than that of postwar Berlin.</p>
+          <p className='a1'>For over 16 years, the Bitcoin network has grown as a lifeline to people living under monetary exploitation worldwide. People with bitcoin preserve their savings through inflation, carry their wealth across borders from war-torn regions, and maintain economic agency where institutions have failed them.</p>
+          <p className='a1'>By securing this network in a decentralized manner, you become part of that mission. Like the Berlin Airlift, it is entirely peaceful. Unlike the Berlin Airlift, anyone, anywhere in the world can contribute.</p>
+          <p className='a1'>Using Bitcoin miners as heaters is more than a novelty. It is a statement that energy can be productive, that waste can be value, and that individuals can opt out of failing systems.</p>
+
+          <h1 className='a1'>Get Started</h1>
+          <p className='a1'><a href="/shop" className='a1' style={{textDecoration: 'underline'}}>Visit the shop</a> or <a href="/contact" className='a1' style={{textDecoration: 'underline'}}>reach out</a> and we'll help you find the right setup.</p>
+        </div>
       </div>
     </div>
     </>

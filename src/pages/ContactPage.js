@@ -19,7 +19,7 @@ const ContactPage = () => {
       </Helmet>
       <div style={{ padding: '20px' }} className='quote' ref={quoteRef}>
         <h1 className='contact'>Contact Us</h1>
-        <p className='contact'>Get in touch with us via email or nostr.</p>
+        <p className='contact'>Get in touch with us via <a href="mailto:c54hometech@proton.me" className="ha-button">email</a> or nostr.</p>
       </div>
     </>
   );
