@@ -1,47 +1,47 @@
-import React, { useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
-import './DonatePage.css';
+import { Link } from 'react-router-dom';
+import Seo from '../components/Seo';
+import { SITE } from '../content/site';
 
-const DonatePage = () => {
-  const quoteRef = useRef(null);
+const DonatePage = () => (
+  <div className="page">
+    <Seo
+      title="Donate Old Bitcoin Miners | C-54 HomeTech"
+      description="Donate old ASIC miners, power supplies and parts. We use them to teach people with stranded solar energy to mine bitcoin and run DATUM themselves."
+      path="/donate"
+    />
+    <article className="panel prose">
+      <p className="eyebrow">Education branch</p>
+      <h1>Donate old machines</h1>
+      <p className="lead">
+        Got an old miner collecting dust? Put it back to work. Our education branch trains people with stranded solar
+        energy to mine on their own terms.
+      </p>
 
-  useEffect(() => {
-    if (quoteRef.current) {
-      quoteRef.current.classList.add('fade-in');
-    }
-  }, []);
+      <h2>What your donation does</h2>
+      <p>
+        We teach why decentralization matters, then we teach the hands-on part: how to set up a miner and run DATUM
+        themselves, so they control their own block templates instead of trusting a pool to do it for them.
+      </p>
 
-  return (
-    <>
-      <Helmet>
-        <title>Donate | C-54 HomeTech</title>
-        <meta name="description" content="Donate old Bitcoin mining machines to help train people about decentralization and solar energy independence." />
-      </Helmet>
-      <div className='quote' ref={quoteRef}>
-        <div className='donate-card'>
-          <div className='donate-inner'>
-            <h1 className='d1'>Donate Old Machines</h1>
-            <p className='d1'>Got an old miner collecting dust? Put it back to work. Our education branch trains people with stranded solar energy to mine on their own terms.</p>
+      <h2>What we accept</h2>
+      <ul>
+        <li>Older-generation ASICs (S9-era and up), working or repairable</li>
+        <li>Power supplies, control boards, and spare hash boards</li>
+        <li>Related networking or solar equipment</li>
+      </ul>
 
-            <h2 className='d1'>What Your Donation Does</h2>
-            <p className='d1'>We teach why decentralization matters, then we teach the hands-on part: how to set up a miner and run DATUM themselves, so they control their own block templates instead of trusting a pool to do it for them.</p>
-
-            <h2 className='d1'>What We Accept</h2>
-            <ul className='d1'>
-              <li>Older-generation ASICs (S9-era and up), working or repairable</li>
-              <li>Power supplies, control boards, and spare hash boards</li>
-              <li>Related networking or solar equipment</li>
-            </ul>
-
-            <h2 className='d1'>How to Donate</h2>
-            <p className='d1'>Reach out and tell us what you have. We'll sort out shipping or pickup from there.</p>
-            <a href="mailto:c54hometech@proton.me" className='donate-button'>Email Us</a>
-            <a href="/contact" className='donate-button'>Contact Page</a>
-          </div>
-        </div>
+      <h2>How to donate</h2>
+      <p>Reach out and tell us what you have. We’ll sort out shipping or pickup from there.</p>
+      <div className="hero-actions">
+        <a href={`mailto:${SITE.email}?subject=${encodeURIComponent('Miner donation')}`} className="btn btn-primary">
+          Email us about a donation
+        </a>
+        <Link to={`/contact?interest=${encodeURIComponent('Donating an old miner')}`} className="btn btn-outline">
+          Use the contact form
+        </Link>
       </div>
-    </>
-  );
-};
+    </article>
+  </div>
+);
 
 export default DonatePage;

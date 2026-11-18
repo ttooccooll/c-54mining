@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "routes": [
+    { "src": "^/static/(.*)$", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "continue": true },
+    { "src": "^/(.+)/$", "status": 308, "headers": { "Location": "/$1" } },
+    { "src": "^/miners$", "status": 308, "headers": { "Location": "/bitcoin-heaters" } },
+    { "src": "^/blog$", "status": 308, "headers": { "Location": "/learn" } },
+    { "src": "^/pos$", "status": 308, "headers": { "Location": "/shop" } },
+    { "handle": "filesystem" },
+    { "src": "^/$", "dest": "/index.html" },
+    { "src": "^/((?!static/|assets/).+)$", "dest": "/$1/index.html", "check": true },
+    { "src": "^/.+$", "status": 404, "dest": "/404.html" }
+  ]
+}

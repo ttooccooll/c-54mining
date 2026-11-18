@@ -1,3 +1,21 @@
+# C-54 HomeTech website
+
+Live at https://www.c54hometech.com, hosted on Vercel.
+
+## Editing the site
+
+- **Prices, packages, miners, FAQs, service area:** `src/content/site.js`. Pages, structured data, and the sitemap all read from it.
+- **Learn articles:** `src/content/articles.js`. Each one gets its own page at `/learn/<slug>` and a sitemap entry automatically.
+- **Page titles and descriptions:** the `<Seo>` element at the top of each file in `src/pages/`.
+
+## How the build works
+
+`npm run build` runs the normal Create React App build, then `scripts/prerender.js` renders every route to its own HTML file (`build/about/index.html`, etc.) with that page's title, description, canonical URL, social preview, and structured data, and writes `build/sitemap.xml` and `build/404.html`. Search engines, AI crawlers, and link previews get real content without running JavaScript; the browser then hydrates the page as usual.
+
+`vercel.json` serves each route's HTML, sends unknown URLs to the not-found page, and permanently redirects old URLs (`/miners`, `/blog`, `/pos`).
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
