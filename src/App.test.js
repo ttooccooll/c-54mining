@@ -1,7 +1,16 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
-import { HEATER_FAQ, ROUTES, SITE } from './content/site';
+import {
+  COUNTY_COUNT,
+  HEATER_FAQ,
+  ROUTES,
+  S9_PRICE_SATS,
+  SERVICE_AREA,
+  SITE,
+  areaServedSchema,
+  sats,
+} from './content/site';
 
 const renderAt = (path) =>
   render(
@@ -87,6 +96,52 @@ test('heaters page answers the buying questions and shows heat output', () => {
     expect(screen.getByText(q)).toBeInTheDocument();
   }
   expect(screen.getByText('About 4,400 BTU/h')).toBeInTheDocument();
+});
+
+test('the S9 price set in site.js shows on its card and on the home page', () => {
+  const price = sats(S9_PRICE_SATS);
+  const { unmount } = renderAt('/bitcoin-heaters');
+  expect(screen.getByText(`${price} + shipping, or local delivery`)).toBeInTheDocument();
+  unmount();
+  renderAt('/');
+  expect(screen.getByText(new RegExp(`An Antminer S9 is ${price} plus shipping`))).toBeInTheDocument();
+});
+
+test('service area lists every county under its region, with towns', () => {
+  renderAt('/');
+  expect(SERVICE_AREA.flatMap((s) => s.counties)).toHaveLength(COUNTY_COUNT);
+  for (const s of SERVICE_AREA) {
+    expect(screen.getByRole('heading', { name: s.region })).toBeInTheDocument();
+    for (const county of s.counties) {
+      expect(s.towns[county].length).toBeGreaterThan(0);
+    }
+  }
+  expect(screen.getByText('Montgomery County')).toBeVisible();
+  expect(screen.getByText('Dayton')).toBeVisible();
+  expect(screen.getByText('Fort Mitchell')).toBeVisible();
+});
+
+test('on a phone, a service area region opens when tapped', () => {
+  window.matchMedia = () => ({ matches: true, addEventListener: () => {}, removeEventListener: () => {} });
+  try {
+    renderAt('/');
+    const region = screen.getByRole('button', { name: /Southeast Indiana/ });
+    expect(region).toHaveAttribute('aria-expanded', 'false');
+    expect(screen.getByText('Dearborn County')).not.toBeVisible();
+    fireEvent.click(region);
+    expect(region).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByText('Dearborn County')).toBeVisible();
+  } finally {
+    delete window.matchMedia;
+  }
+});
+
+test('structured data names every county and town served, once each', () => {
+  const names = areaServedSchema().map((a) => a.name);
+  expect(names).toContain('Hamilton County, Ohio');
+  expect(names).toContain('Lexington, KY');
+  expect(names).toContain('Lawrenceburg, IN');
+  expect(new Set(names).size).toBe(names.length);
 });
 
 test('pages speak in the first person, not as "we"', () => {

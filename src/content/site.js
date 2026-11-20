@@ -27,30 +27,66 @@ export const SITE = {
 };
 
 // Hamilton County, every county touching it, and every county touching those,
-// plus Fayette County (Lexington). `notes` labels a county with its main city.
+// plus Fayette County (Lexington).
+//   region: the heading shown above the state's counties
+//   cities: the few names shown beside the heading on a phone, before the list is opened
+//   towns:  the towns listed under each county on the site and in the structured data
+//   notes:  labels a county with its main city in the quote form's county list
 export const SERVICE_AREA = [
   {
     state: 'Ohio',
     abbr: 'OH',
+    region: 'Southwest Ohio',
+    cities: ['Cincinnati', 'Dayton', 'Hamilton', 'Mason'],
     counties: ['Hamilton', 'Butler', 'Warren', 'Clermont', 'Montgomery', 'Greene', 'Clinton', 'Brown', 'Preble'],
+    towns: {
+      Hamilton: ['Cincinnati', 'Norwood', 'Blue Ash', 'Loveland'],
+      Butler: ['Hamilton', 'Fairfield', 'West Chester', 'Middletown', 'Oxford'],
+      Warren: ['Mason', 'Lebanon', 'Springboro', 'Franklin'],
+      Clermont: ['Milford', 'Batavia', 'Amelia', 'New Richmond'],
+      Montgomery: ['Dayton', 'Kettering', 'Centerville', 'Huber Heights'],
+      Greene: ['Beavercreek', 'Xenia', 'Fairborn', 'Yellow Springs'],
+      Clinton: ['Wilmington', 'Blanchester'],
+      Brown: ['Georgetown', 'Mount Orab', 'Ripley'],
+      Preble: ['Eaton', 'Camden', 'Lewisburg'],
+    },
   },
   {
     state: 'Kentucky',
     abbr: 'KY',
+    region: 'Northern Kentucky and Lexington',
+    cities: ['Covington', 'Florence', 'Newport', 'Lexington'],
     counties: ['Boone', 'Kenton', 'Campbell', 'Grant', 'Pendleton', 'Bracken', 'Gallatin', 'Fayette'],
+    towns: {
+      Boone: ['Florence', 'Burlington', 'Union', 'Hebron'],
+      Kenton: ['Covington', 'Erlanger', 'Independence', 'Fort Mitchell'],
+      Campbell: ['Newport', 'Fort Thomas', 'Alexandria', 'Bellevue'],
+      Grant: ['Williamstown', 'Dry Ridge', 'Crittenden'],
+      Pendleton: ['Falmouth', 'Butler'],
+      Bracken: ['Augusta', 'Brooksville'],
+      Gallatin: ['Warsaw', 'Glencoe'],
+      Fayette: ['Lexington'],
+    },
     notes: { Fayette: 'Lexington' },
   },
   {
     state: 'Indiana',
     abbr: 'IN',
+    region: 'Southeast Indiana',
+    cities: ['Lawrenceburg', 'Aurora', 'Batesville'],
     counties: ['Dearborn', 'Franklin', 'Union', 'Ohio', 'Ripley', 'Switzerland'],
+    towns: {
+      Dearborn: ['Lawrenceburg', 'Aurora', 'Greendale'],
+      Franklin: ['Brookville', 'Oldenburg'],
+      Union: ['Liberty'],
+      Ohio: ['Rising Sun'],
+      Ripley: ['Batesville', 'Versailles', 'Osgood'],
+      Switzerland: ['Vevay'],
+    },
   },
 ];
 
-export const SERVICE_CITIES = [
-  'Cincinnati', 'Dayton', 'Hamilton', 'Fairfield', 'West Chester', 'Mason', 'Lebanon',
-  'Middletown', 'Milford', 'Batavia', 'Covington', 'Newport', 'Florence', 'Lawrenceburg', 'Lexington',
-];
+export const COUNTY_COUNT = SERVICE_AREA.reduce((n, s) => n + s.counties.length, 0);
 
 export const countyLabel = (state, county) =>
   `${county} County, ${state.abbr}${state.notes?.[county] ? ` (${state.notes[county]})` : ''}`;
@@ -106,6 +142,13 @@ export const HA_TIERS = [
   },
 ];
 
+export const usd = (n) => `$${n.toLocaleString('en-US')}`;
+export const sats = (n) => `${n.toLocaleString('en-US')} sats`;
+
+// The Antminer S9 price, in sats. Shown on its card, on the home page and in the
+// heater FAQ. Change it here only.
+export const S9_PRICE_SATS = 80000;
+
 // `heat` is the wattage converted to BTU per hour (watts × 3.412), rounded.
 // Add `price: 'From $199'` (any text) to a miner to show a price on its card.
 export const MINERS = [
@@ -114,19 +157,19 @@ export const MINERS = [
     short: 'Nano 3S',
     name: 'Canaan Avalon Nano 3S',
     use: 'Desk, bedroom, or small office',
-    power: 'About 140 W',
+    power: 'About 140\u00a0W',
     heat: 'About 480 BTU/h',
     image: '/assets/nano3-2.jpg',
     imageAlt: 'Canaan Avalon Nano bitcoin mining heater with its box and power supply',
     description:
-      'Small and quiet, and it mines about 6 TH/s, half again what the original Nano 3 managed on the same 140 W. That takes the chill off a desk or a small room; it won’t heat one alone. The easiest way to start mining at home. Plugs into a normal outlet.',
+      'Small and quiet, and it mines about 6 TH/s, half again what the original Nano 3 managed on the same 140\u00a0W. That takes the chill off a desk or a small room; it won’t heat one alone. The easiest way to start mining at home. Plugs into a normal outlet.',
   },
   {
     id: 'bitaxe',
     short: 'BitAxe',
     name: 'BitAxe',
     use: 'Learning and tinkering',
-    power: 'About 15 W',
+    power: 'About 15\u00a0W',
     description:
       'Open-source, home-built miners about the size of a phone. Not much heat, but the best way to learn how mining works. Available in several configurations.',
   },
@@ -135,32 +178,33 @@ export const MINERS = [
     short: 'S9',
     name: 'Bitmain Antminer S9',
     use: 'Garage, workshop, or ducted into a room',
-    power: 'About 1,300 W',
+    power: 'About 1,300\u00a0W',
     heat: 'About 4,400 BTU/h',
+    price: `${sats(S9_PRICE_SATS)} + shipping, or local delivery`,
     image: '/assets/s9i-1.jpg',
     imageAlt: 'Antminer S9 bitcoin miner fitted with a duct shroud and elbow to send heat into a room',
     description:
-      'The old flagship miner, now a strong space heater: nearly the output of a plug-in heater on high. Loud out of the box. Some units come with Noctua fan mods for quieter running, or a shroud to connect to ductwork. Runs on a standard 120 V circuit.',
+      'The old flagship miner, now a strong space heater: nearly the output of a plug-in heater on high. Loud out of the box. Some units come with Noctua fan mods for quieter running, or a shroud to connect to ductwork. Runs on a standard 120\u00a0V circuit.',
   },
   {
     id: 's19',
     short: 'S19',
     name: 'Bitmain Antminer S19',
     use: 'Large spaces, ducted heat',
-    power: 'About 3,000 W (240 V)',
+    power: 'About 3,000\u00a0W (240\u00a0V)',
     heat: 'About 10,200 BTU/h',
     description:
-      'Much more hashrate than the S9, and more efficient. Enough heat for a large room or a shop. Needs a 240 V circuit and is best ducted or kept out of living spaces because of the noise.',
+      'Much more hashrate than the S9, and more efficient. Enough heat for a large room or a shop. Needs a 240\u00a0V circuit and is best ducted or kept out of living spaces because of the noise.',
   },
   {
     id: 's21',
     short: 'S21',
     name: 'Bitmain Antminer S21',
     use: 'Serious heat mining',
-    power: 'About 3,500 W (240 V)',
+    power: 'About 3,500\u00a0W (240\u00a0V)',
     heat: 'About 11,900 BTU/h',
     description:
-      'The most efficient machine I sell, so the most bitcoin for each watt of heat. For a big space, a shop, or a ducted whole-room setup. Needs a 240 V circuit.',
+      'The most efficient machine I sell, so the most bitcoin for each watt of heat. For a big space, a shop, or a ducted whole-room setup. Needs a 240\u00a0V circuit.',
   },
 ];
 
@@ -335,7 +379,7 @@ export const HEATER_FAQ = [
   },
   {
     q: 'Do I need special wiring?',
-    a: 'The Nano 3S, BitAxe and S9 plug into a normal 120 V outlet. The S19 and S21 need a 240 V circuit, the kind an electric dryer uses.',
+    a: 'The Nano 3S, BitAxe and S9 plug into a normal 120\u00a0V outlet. The S19 and S21 need a 240\u00a0V circuit, the kind an electric dryer uses.',
   },
   {
     q: 'Can a miner run on a thermostat?',
@@ -343,21 +387,23 @@ export const HEATER_FAQ = [
   },
   {
     q: 'How much do the heaters cost?',
-    a: 'Prices move with the bitcoin market and with what I have in stock. Ask and I’ll send current prices for the machines that fit your space.',
+    a: `The Antminer S9 is ${sats(S9_PRICE_SATS)} plus shipping. Prices for the other machines move with the bitcoin market and with what I have in stock, so ask and I’ll send current prices for the ones that fit your space.`,
   },
   {
     q: 'Do you ship?',
-    a: `Yes, anywhere in the US. In-person setup is available across ${SITE.regionLong}.`,
+    a: `Yes, anywhere in the US. If you’re local, I’m happy to deliver it myself instead. In-person setup is available across ${SITE.regionLong}.`,
   },
 ];
 
-export const usd = (n) => `$${n.toLocaleString('en-US')}`;
-export const sats = (n) => `${n.toLocaleString('en-US')} sats`;
-
-export const areaServedSchema = () =>
-  SERVICE_AREA.flatMap(({ state, counties }) =>
+// Every county, then every town listed under it, for search engines.
+export const areaServedSchema = () => [
+  ...SERVICE_AREA.flatMap(({ state, counties }) =>
     counties.map((c) => ({ '@type': 'AdministrativeArea', name: `${c} County, ${state}` }))
-  );
+  ),
+  ...SERVICE_AREA.flatMap(({ abbr, counties, towns }) =>
+    counties.flatMap((c) => (towns?.[c] || []).map((t) => ({ '@type': 'City', name: `${t}, ${abbr}` })))
+  ),
+];
 
 export const businessSchema = () => ({
   '@context': 'https://schema.org',

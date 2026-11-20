@@ -6,6 +6,9 @@ import { ACCESSORIES, HEATER_FAQ, MINERS } from '../content/site';
 const heaterLink = (name) =>
   `/contact?interest=${encodeURIComponent('Bitcoin mining heater')}&item=${encodeURIComponent(name)}`;
 
+// Heaters with a photo get the wide cards in the top row; the rest follow in their usual order.
+const LINEUP = [...MINERS.filter((m) => m.image), ...MINERS.filter((m) => !m.image)];
+
 const BitcoinHeatersPage = () => (
   <div className="page">
     <Seo
@@ -18,7 +21,7 @@ const BitcoinHeatersPage = () => (
     <section className="hero hero-sm">
       <h1>Bitcoin mining heaters</h1>
       <p className="lead">
-        Every watt a bitcoin miner draws comes out as heat. A 1,300 W miner warms a room like a 1,300 W space heater,
+        Every watt a bitcoin miner draws comes out as heat. A 1,300&nbsp;W miner warms a room like a 1,300&nbsp;W space heater,
         and it earns bitcoin while it does. I heat my own house with them. I sell miners set up for home heating, ship
         them anywhere in the US, and install them in person around Greater Cincinnati.
       </p>
@@ -30,12 +33,14 @@ const BitcoinHeatersPage = () => (
 
     <section aria-labelledby="lineup">
       <h2 id="lineup" className="section-title">Pick a heater by the space you’re heating</h2>
-      <p className="section-sub">Stock changes from week to week. Ask and I’ll tell you what I have and what it costs.</p>
-      <div className="cards">
-        {MINERS.map((m) => (
-          <article key={m.id} className="card miner">
+      <p className="section-sub">
+        Stock changes from week to week. Where a card has no price, ask and I’ll tell you what I have and what it costs.
+      </p>
+      <div className="lineup">
+        {LINEUP.map((m) => (
+          <article key={m.id} className={m.image ? 'card miner miner-wide' : 'card miner'}>
             {m.image && (
-              <img src={m.image} alt={m.imageAlt} width="600" height="450" loading="lazy" className="card-img" />
+              <img src={m.image} alt={m.imageAlt} width="600" height="400" loading="lazy" className="card-img" />
             )}
             <h3>{m.name}</h3>
             <dl className="specs">
@@ -57,7 +62,7 @@ const BitcoinHeatersPage = () => (
         ))}
       </div>
       <p className="section-sub heat-note">
-        For scale, a plug-in space heater on high is 1,500 W, or about 5,100 BTU/h.
+        For scale, a plug-in space heater on high is 1,500&nbsp;W, or about 5,100&nbsp;BTU/h.
       </p>
     </section>
 

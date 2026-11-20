@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { CtaBand, Faq, ServiceArea, faqSchema } from '../components/Blocks';
-import { HA_TIERS, HOME_FAQ, NO_SUBSCRIPTION_COMPARISON, SITE, businessSchema, usd } from '../content/site';
+import {
+  HA_TIERS,
+  HOME_FAQ,
+  NO_SUBSCRIPTION_COMPARISON,
+  S9_PRICE_SATS,
+  SITE,
+  businessSchema,
+  sats,
+  usd,
+} from '../content/site';
 
 // Things a finished install does. Plain examples sell this better than a feature list.
 const EXAMPLES = [
@@ -87,7 +96,8 @@ const HomePage = () => (
         ))}
       </div>
       <p className="section-sub">
-        Hardware is separate, and you may already own it. <Link to="/home-assistant">See what each package includes</Link>.
+        Hardware is separate, and you may already own it.{' '}
+        <Link to="/home-assistant" className="nowrap">See what each package includes</Link>.
       </p>
     </section>
 
@@ -139,6 +149,9 @@ const HomePage = () => (
           while it runs. I heat my own house with them. Put one in the garage, workshop, basement or living room,
           connect it to Home Assistant, and it follows a thermostat schedule like any other heater.
         </p>
+        <p>
+          An Antminer S9 is {sats(S9_PRICE_SATS)} plus shipping, and if you’re local I’ll deliver it myself.
+        </p>
         <p className="muted">
           What a miner earns depends on the bitcoin price, network difficulty and your electric rate. I’ll go through
           the numbers with you before you buy. If you’d rather not pay for one up front,{' '}
@@ -169,7 +182,7 @@ const HomePage = () => (
       <p>
         The business is named for the C-54, one of the transport planes that flew food and coal into blockaded West
         Berlin in 1948 and 1949. I think a home that answers only to the people living in it belongs to the same
-        tradition. <Link to="/about">Why the name</Link>
+        tradition. <Link to="/about" className="nowrap">Why the name</Link>
       </p>
     </section>
 

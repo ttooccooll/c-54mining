@@ -3,6 +3,21 @@ import Seo from '../components/Seo';
 import { CtaBand, Faq, PricingTiers, ServiceArea, faqSchema } from '../components/Blocks';
 import { HA_FAQ, HA_TIERS, SITE, areaServedSchema } from '../content/site';
 
+const DEVICES = [
+  'Lights and switches',
+  'Smart plugs',
+  'Thermostats',
+  'Door locks',
+  'Garage doors',
+  'Cameras and doorbells',
+  'Motion and door sensors',
+  'Leak detectors',
+  'Blinds',
+  'Speakers and voice assistants',
+  'Solar and energy monitors',
+  'Bitcoin miners',
+];
+
 const WHY = [
   'Camera clips, sensor readings and the record of when you come and go stay on a computer in your house.',
   'Nothing in your home waits on a company’s servers. In 2022 Insteon switched off its cloud without warning, and the app its customers ran their homes with stopped working. In 2020 Wink began charging a monthly fee to keep using hubs people had already bought.',
@@ -72,11 +87,14 @@ const HomeAssistantPage = () => (
 
     <section className="panel" aria-labelledby="works-with">
       <h2 id="works-with">What I can connect</h2>
+      <ul className="device-list">
+        {DEVICES.map((d) => (
+          <li key={d}>{d}</li>
+        ))}
+      </ul>
       <p>
-        Lights and switches, smart plugs, thermostats, door locks, garage doors, cameras and doorbells, motion and
-        door sensors, leak detectors, blinds, speakers and voice assistants, solar inverters and energy monitors, and
-        bitcoin miners. Zigbee, Z-Wave, Matter, Thread and Wi-Fi devices all work, from Philips Hue, IKEA, Lutron,
-        Ecobee, Shelly, Aqara and many others.
+        Zigbee, Z-Wave, Matter, Thread and Wi-Fi devices all work, from Philips Hue, IKEA, Lutron, Ecobee, Shelly,
+        Aqara and many others.
       </p>
       <p className="muted">Not sure about a device? Send me a list and I’ll check it before you book.</p>
     </section>
