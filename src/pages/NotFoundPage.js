@@ -11,7 +11,7 @@ const NotFoundPage = () => (
     />
     <section className="hero hero-sm">
       <h1>That page took a different flight path.</h1>
-      <p className="lead">It may have moved. Here’s where most people are headed:</p>
+      <p className="lead">It may have moved. These are the pages people usually want:</p>
       <div className="hero-actions">
         <Link to="/home-assistant" className="btn btn-primary">Smart home installation</Link>
         <Link to="/bitcoin-heaters" className="btn btn-outline">Bitcoin mining heaters</Link>

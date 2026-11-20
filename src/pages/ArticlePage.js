@@ -44,7 +44,7 @@ const ArticlePage = () => {
       </article>
       <CtaBand
         heading="Want this running in your home?"
-        text="We set up mining heaters and private Home Assistant smart homes around Greater Cincinnati. One price, no subscription."
+        text="I set up mining heaters and private Home Assistant smart homes around Greater Cincinnati. One price, no subscription."
       />
     </div>
   );

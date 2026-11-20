@@ -891,6 +891,72 @@ a.card-play p { color: #dfe4ea; }
   font-weight: 700;
 }
 
+/* ---------- Home: everyday examples and the price row ---------- */
+
+.examples {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0 36px;
+}
+
+.examples li {
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  color: #e7ebf0;
+}
+
+.price-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+a.price-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+
+a.price-cell:hover {
+  border-color: var(--orange);
+  text-decoration: none;
+}
+
+.price-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.price-amount {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--orange);
+}
+
+.price-blurb {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.heat-note {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
 /* ---------- Responsive ---------- */
 
 @media screen and (max-width: 860px) {

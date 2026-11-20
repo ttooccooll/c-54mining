@@ -7,9 +7,9 @@ const Footer = () => (
       <div>
         <p className="footer-brand">{SITE.name}</p>
         <p>
-          Private smart home installation and Bitcoin mining heaters for {SITE.regionLong}.
+          Private smart home installation and Bitcoin mining heaters for {SITE.regionLong}. Run by {SITE.owner}.
         </p>
-        <p className="footer-promise">No subscriptions. Ever.</p>
+        <p className="footer-promise">No subscriptions. You pay once.</p>
       </div>
       <nav aria-label="Footer">
         <p className="footer-heading">Services</p>

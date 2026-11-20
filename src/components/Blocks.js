@@ -40,7 +40,7 @@ export const AccessoryCards = () => (
           {a.storyUrl && (
             <p>
               <a href={a.storyUrl} className="card-link" target="_blank" rel="noopener noreferrer">
-                Read the build story on Stacker News →
+                Read the build story on Stacker News
               </a>
             </p>
           )}
@@ -100,7 +100,7 @@ export const PricingTiers = ({ headingLevel = 3 }) => {
           </ul>
           <p className="tier-hours">Typical install: {t.hours}</p>
           <Link to={`/contact?package=${t.id}`} className="btn btn-primary btn-block">
-            Book {t.name.replace(' Setup', '')}
+            Request {t.name.replace(' Setup', '')}
           </Link>
         </div>
       ))}
@@ -108,11 +108,11 @@ export const PricingTiers = ({ headingLevel = 3 }) => {
   );
 };
 
-export const ServiceArea = ({ heading = 'Where we install' }) => (
+export const ServiceArea = ({ heading = 'Where I install' }) => (
   <section className="panel" aria-labelledby="service-area">
     <h2 id="service-area">{heading}</h2>
     <p>
-      In-person installs across {SITE.areaSummary}. That includes {SERVICE_CITIES.slice(0, -1).join(', ')} and{' '}
+      I install in person across {SITE.areaSummary}. That includes {SERVICE_CITIES.slice(0, -1).join(', ')} and{' '}
       {SERVICE_CITIES[SERVICE_CITIES.length - 1]}.
     </p>
     <div className="area-grid">
@@ -133,7 +133,7 @@ export const ServiceArea = ({ heading = 'Where we install' }) => (
   </section>
 );
 
-export const Faq = ({ items, heading = 'Frequently asked questions' }) => (
+export const Faq = ({ items, heading = 'Common questions' }) => (
   <section className="panel" aria-labelledby="faq">
     <h2 id="faq">{heading}</h2>
     <div className="faq">
@@ -158,8 +158,8 @@ export const faqSchema = (items) => ({
 });
 
 export const CtaBand = ({
-  heading = 'Ready to own your smart home?',
-  text = 'Tell us what you have and what you want it to do. We’ll reply with a flat price. No sales call, no pressure.',
+  heading = 'Tell me about your house',
+  text = `Send me what you have and what you want it to do. I’ll reply within ${SITE.replyTime} with a flat price.`,
   to = '/contact',
   label = 'Get a free quote',
 }) => (

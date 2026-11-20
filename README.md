@@ -5,6 +5,8 @@ Live at https://www.c54hometech.com, hosted on Vercel.
 ## Editing the site
 
 - **Prices, packages, miners, FAQs, service area:** `src/content/site.js`. Pages, structured data, and the sitemap all read from it.
+- **Your name and the reply-time promise:** `owner` and `replyTime` at the top of `src/content/site.js`. The site speaks as "I" throughout, and a test fails if a page slips back to "we".
+- **Heater prices:** add `price: 'From $199'` (any text) to a miner in `MINERS` and it shows on that card.
 - **Learn articles:** `src/content/articles.js`. Each one gets its own page at `/learn/<slug>` and a sitemap entry automatically.
 - **Page titles and descriptions:** the `<Seo>` element at the top of each file in `src/pages/`.
 

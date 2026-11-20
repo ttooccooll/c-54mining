@@ -4,6 +4,10 @@
 
 export const SITE = {
   name: 'C-54 HomeTech',
+  // The site speaks in the first person. This is the name it introduces itself with.
+  owner: 'Jason',
+  // The reply time promised on the quote form and around the site. Change it here only.
+  replyTime: 'two business days',
   url: 'https://www.c54hometech.com',
   email: 'c54hometech@proton.me',
   region: 'Greater Cincinnati',
@@ -51,12 +55,14 @@ export const SERVICE_CITIES = [
 export const countyLabel = (state, county) =>
   `${county} County, ${state.abbr}${state.notes?.[county] ? ` (${state.notes[county]})` : ''}`;
 
+// `blurb` is the one-line version shown on the home page price row.
 export const HA_TIERS = [
   {
     id: 'basic',
     name: 'Basic Setup',
     price: 315,
     hours: '1–2 hours',
+    blurb: 'Up to 5 devices, running and on your phone',
     summary: 'Get Home Assistant running and your first devices connected.',
     features: [
       'Home Assistant installed on your hardware',
@@ -70,6 +76,7 @@ export const HA_TIERS = [
     name: 'Standard Setup',
     price: 575,
     hours: '2–3 hours',
+    blurb: 'Up to 15 devices, automations and a dashboard',
     summary: 'A working smart home with automations and a dashboard built for you.',
     features: [
       'Everything in Basic',
@@ -85,6 +92,7 @@ export const HA_TIERS = [
     price: 1050,
     hours: '3–4 hours',
     featured: true,
+    blurb: 'Up to 25 devices, energy monitoring and miner control',
     summary: 'The whole house: advanced automations, energy monitoring, and mining heaters.',
     features: [
       'Everything in Standard',
@@ -98,6 +106,8 @@ export const HA_TIERS = [
   },
 ];
 
+// `heat` is the wattage converted to BTU per hour (watts × 3.412), rounded.
+// Add `price: 'From $199'` (any text) to a miner to show a price on its card.
 export const MINERS = [
   {
     id: 'nano3s',
@@ -105,10 +115,11 @@ export const MINERS = [
     name: 'Canaan Avalon Nano 3S',
     use: 'Desk, bedroom, or small office',
     power: 'About 140 W',
+    heat: 'About 480 BTU/h',
     image: '/assets/nano3-2.jpg',
     imageAlt: 'Canaan Avalon Nano bitcoin mining heater with its box and power supply',
     description:
-      'A small, quiet heater that mines about 6 TH/s, half again as much as the original Nano 3 on the same 140 W. Good supplemental heat for one room and the easiest way to start mining at home. Plugs into a normal outlet.',
+      'Small and quiet, and it mines about 6 TH/s, half again what the original Nano 3 managed on the same 140 W. That takes the chill off a desk or a small room; it won’t heat one alone. The easiest way to start mining at home. Plugs into a normal outlet.',
   },
   {
     id: 'bitaxe',
@@ -125,10 +136,11 @@ export const MINERS = [
     name: 'Bitmain Antminer S9',
     use: 'Garage, workshop, or ducted into a room',
     power: 'About 1,300 W',
+    heat: 'About 4,400 BTU/h',
     image: '/assets/s9i-1.jpg',
     imageAlt: 'Antminer S9 bitcoin miner fitted with a duct shroud and elbow to send heat into a room',
     description:
-      'The old flagship miner, now a strong space heater. Loud out of the box. Some units come with Noctua fan mods for quieter running, or a shroud to connect to ductwork. Runs on a standard 120 V circuit.',
+      'The old flagship miner, now a strong space heater: nearly the output of a plug-in heater on high. Loud out of the box. Some units come with Noctua fan mods for quieter running, or a shroud to connect to ductwork. Runs on a standard 120 V circuit.',
   },
   {
     id: 's19',
@@ -136,8 +148,9 @@ export const MINERS = [
     name: 'Bitmain Antminer S19',
     use: 'Large spaces, ducted heat',
     power: 'About 3,000 W (240 V)',
+    heat: 'About 10,200 BTU/h',
     description:
-      'Much more hashrate and more efficient than the S9. Enough heat for a large room or shop. Needs a 240 V circuit and is best ducted or kept out of living spaces because of noise.',
+      'Much more hashrate than the S9, and more efficient. Enough heat for a large room or a shop. Needs a 240 V circuit and is best ducted or kept out of living spaces because of the noise.',
   },
   {
     id: 's21',
@@ -145,8 +158,9 @@ export const MINERS = [
     name: 'Bitmain Antminer S21',
     use: 'Serious heat mining',
     power: 'About 3,500 W (240 V)',
+    heat: 'About 11,900 BTU/h',
     description:
-      'The newest generation and the most bitcoin per watt. For a big space, a shop, or a ducted whole-room setup. Needs a 240 V circuit.',
+      'The most efficient machine I sell, so the most bitcoin for each watt of heat. For a big space, a shop, or a ducted whole-room setup. Needs a 240 V circuit.',
   },
 ];
 
@@ -174,7 +188,7 @@ export const ACCESSORIES = [
     imageAlt:
       'Guitaxe: a miniature black guitar on a bookshelf with a plaque reading “This machine kills fascists (and tyrants of every flavor)”',
     description:
-      'A tabletop guitar for your BitAxe, after Woody Guthrie’s famous plaque, amended: “This machine kills fascists (and tyrants of every flavor).” The miner sits inside the body and its screen lives in the neck. Body only; bring your own BitAxe.',
+      'A tabletop guitar for your BitAxe. It borrows the slogan from Woody Guthrie’s guitar and amends it: “This machine kills fascists (and tyrants of every flavor).” The miner sits inside the body and its screen lives in the neck. Body only; bring your own BitAxe.',
     storyUrl: 'https://stacker.news/items/1596515',
     squareUrl: '', // paste this item's Square payment link to add a card option
   },
@@ -206,7 +220,7 @@ export const ACCESSORIES = [
     imageAlt:
       'Antminer S9 space heater ducted into a metal elbow, with an orange plaque reading “This space heater kills fascists (and tyrants of every flavor)”',
     description:
-      'Turn your S9 into a statement: a 3D-printed plaque reading “This space heater kills fascists (and tyrants of every flavor).” The middle child of the Woody series, between the Guitaxe and the furnace. Plaque only; the S9 and duct aren’t included.',
+      'A 3D-printed plaque for the Antminer S9 that reads “This space heater kills fascists (and tyrants of every flavor).” It’s the middle child of the Woody series, between the Guitaxe and the furnace. Plaque only; the S9 and duct aren’t included.',
     storyUrl: 'https://stacker.news/items/1600205',
     squareUrl: '', // paste this item's Square payment link to add a card option
   },
@@ -222,7 +236,7 @@ export const ACCESSORIES = [
     imageAlt:
       'Woody furnace shroud: a 3D-printed duct shroud with an orange plaque reading “This furnace kills fascists (and tyrants of every flavor)”',
     description:
-      'A 3D-printed shroud that connects a miner to an AC Infinity inline fan, so you can duct the heat into your furnace or a room and keep the noise down. It wears its own amended Woody plaque: “This furnace kills fascists (and tyrants of every flavor).” Ask about a fit for your machine.',
+      'A 3D-printed shroud that connects a miner to an AC Infinity inline fan, so you can duct the heat into your furnace or a room and keep the noise down. It wears its own amended Woody plaque: “This furnace kills fascists (and tyrants of every flavor).” Tell me which miner you have and I’ll confirm the fit.',
     storyUrl: 'https://stacker.news/items/1596515',
     squareUrl: '', // paste this item's Square payment link to add a card option
   },
@@ -233,18 +247,25 @@ export const ACCESSORY_INTEREST = 'BitAxe case, Woody plaque or shroud';
 export const accessoryLink = (name) =>
   `/contact?interest=${encodeURIComponent(ACCESSORY_INTEREST)}&item=${encodeURIComponent(name)}`;
 
+// The last row is one where the subscription companies win. It stays in on purpose.
 export const NO_SUBSCRIPTION_COMPARISON = [
   { label: 'Monthly fee', them: 'Yes, for as long as you use it', us: 'None. You pay once.' },
+  { label: 'Cost over five years', them: '$1,800 at $30 a month, and it keeps going', us: '$315 to $1,050, paid once' },
   { label: 'If the company’s servers go down', them: 'Devices can stop working', us: 'Keeps running, because it all lives in your house' },
   { label: 'Where your camera and sensor data goes', them: 'Their cloud', us: 'Your hardware, in your home' },
   { label: 'Mixing device brands', them: 'Usually limited to theirs', us: 'Thousands of brands work together' },
   { label: 'Who owns it', them: 'You rent access', us: 'You own the hardware and the software' },
+  { label: 'A call center watching for alarms', them: 'Often part of the plan', us: 'No. Alerts go to your phone.' },
 ];
 
 export const HOME_FAQ = [
   {
     q: 'Do I have to pay a monthly fee?',
-    a: 'No, never. You pay once for the installation and you own everything. If you want help later, book a one-time visit. There’s no plan and no contract.',
+    a: 'No. You pay once for the installation, and everything installed is yours. If you want help later, you book a single visit. There is no plan to sign up for.',
+  },
+  {
+    q: 'Who does the work?',
+    a: `I do. I’m ${SITE.owner}, and C-54 HomeTech is a one-person business, so the person who answers your email is the person who shows up at your door.`,
   },
   {
     q: 'Will it keep working if my internet goes down?',
@@ -252,11 +273,15 @@ export const HOME_FAQ = [
   },
   {
     q: 'What devices work with it?',
-    a: 'Thousands. Zigbee, Z-Wave, Matter and Wi-Fi devices from brands like Philips Hue, IKEA, Lutron, Ecobee, Shelly and many more. Send us your list and we’ll check before you pay anything.',
+    a: 'Thousands. Zigbee, Z-Wave, Matter and Wi-Fi devices from Philips Hue, IKEA, Lutron, Ecobee, Shelly and many others. Send me your list and I’ll check it before you pay anything.',
+  },
+  {
+    q: 'Is this a monitored security system?',
+    a: 'No. Nobody at a call center watches your house or sends the police. Home Assistant sends alerts from your door, motion and leak sensors straight to your phone, and you decide what to do. If you need professional monitoring, this doesn’t replace it.',
   },
   {
     q: 'Do I need to care about Bitcoin?',
-    a: 'No. A smart home install has nothing to do with Bitcoin unless you want it to. The mining heaters are there if you’re curious.',
+    a: 'No. A smart home install has nothing to do with Bitcoin unless you want it to. The mining heaters are a separate thing I sell.',
   },
   {
     q: 'Where do you install?',
@@ -267,27 +292,62 @@ export const HOME_FAQ = [
 export const HA_FAQ = [
   {
     q: 'What hardware do I need?',
-    a: 'A small computer that stays on: a Raspberry Pi 4 or 5, a mini PC, an old laptop or desktop, or the official Home Assistant Green. Hardware isn’t included in the package price. We’ll help you pick what fits your home, or use what you already have.',
+    a: 'A small computer that stays on: a Raspberry Pi 4 or 5, a mini PC, an old laptop or desktop, or the official Home Assistant Green. Hardware isn’t included in the package price. I’ll help you pick what fits your home, or use what you already have.',
   },
   {
     q: 'How long does installation take?',
     a: 'Basic takes about 1–2 hours, Standard 2–3 hours, and Premium 3–4 hours, all done in your home.',
   },
   {
+    q: 'I started setting up Home Assistant and got stuck. Can you finish it?',
+    a: 'Yes. Tell me what’s running and where it stopped, and I’ll quote a flat price to finish it.',
+  },
+  {
     q: 'Do you offer ongoing support?',
-    a: 'Yes, as one-time help: book a follow-up visit or session whenever you need one. We don’t sell support plans or subscriptions, and Premium includes 30 days of help after install.',
+    a: 'Yes, one visit at a time. Book a follow-up whenever you need one. I don’t sell support plans or subscriptions, and Premium includes 30 days of help after the install.',
+  },
+  {
+    q: 'What happens if you stop doing this?',
+    a: 'Nothing changes at your house. Home Assistant is free, open-source software with a large community behind it. It runs on hardware you own, and you’ll have the admin login. Anyone who knows Home Assistant can pick up where I left off, including you.',
   },
   {
     q: 'Can I control things from my phone when I’m away?',
-    a: 'Yes, if you want to. We set up remote access so it doesn’t depend on a paid cloud plan.',
+    a: 'Yes, if you want that. I set up remote access in a way that doesn’t depend on a paid cloud plan.',
   },
   {
     q: 'Can you connect my existing smart devices?',
-    a: 'Most likely. Home Assistant works with thousands of brands, including a lot of gear that was built for other apps. Send us a list and we’ll confirm before you book.',
+    a: 'Most likely. Home Assistant works with thousands of brands, including a lot of gear that was built for other apps. Send me a list and I’ll confirm before you book.',
   },
   {
     q: 'My home is bigger than 25 devices. Can you still help?',
-    a: 'Yes. Tell us what you have and we’ll quote a flat price for the whole job.',
+    a: 'Yes. Tell me what you have and I’ll quote a flat price for the whole job.',
+  },
+];
+
+export const HEATER_FAQ = [
+  {
+    q: 'Does a bitcoin heater pay for itself?',
+    a: 'Sometimes, and nobody can promise when. A miner makes exactly as much heat per watt as any electric heater, so next to a plug-in space heater you get the same heat for the same electricity, plus bitcoin. Next to a gas furnace, electric heat usually costs more, so the bitcoin has to cover the difference. What a miner earns moves with the bitcoin price, network difficulty and your electric rate. I’ll work through your numbers before you buy, and if they don’t add up I’ll tell you.',
+  },
+  {
+    q: 'How loud is a bitcoin miner?',
+    a: 'The Nano 3S and BitAxe are quiet enough to sit on a desk. Full-size Antminers are loud, closer to a shop vac than a space heater. They belong in a garage, basement or workshop, or ducted into the room from somewhere else. Quieter fans help too.',
+  },
+  {
+    q: 'Do I need special wiring?',
+    a: 'The Nano 3S, BitAxe and S9 plug into a normal 120 V outlet. The S19 and S21 need a 240 V circuit, the kind an electric dryer uses.',
+  },
+  {
+    q: 'Can a miner run on a thermostat?',
+    a: 'Yes. With Home Assistant a miner behaves like any thermostat-controlled heater: on when the room is cold, off when it’s warm or when power is expensive. The Premium smart home package includes miner integration.',
+  },
+  {
+    q: 'How much do the heaters cost?',
+    a: 'Prices move with the bitcoin market and with what I have in stock. Ask and I’ll send current prices for the machines that fit your space.',
+  },
+  {
+    q: 'Do you ship?',
+    a: `Yes, anywhere in the US. In-person setup is available across ${SITE.regionLong}.`,
   },
 ];
 

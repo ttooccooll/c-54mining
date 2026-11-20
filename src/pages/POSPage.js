@@ -17,11 +17,10 @@ const POSPage = () => (
       path="/shop"
     />
     <section className="hero hero-sm">
-      <p className="eyebrow">Shop · One-time prices, never a subscription</p>
       <h1>Shop</h1>
       <p className="lead">
         {hasAccessories
-          ? 'Home-mining gear that doubles as propaganda, because if your miner isn’t making a statement, what is it even doing? Plus merch.'
+          ? 'Cases, plaques and shrouds for home miners, each one with an opinion. I designed them for my own machines and ran them before listing them. Merch too.'
           : 'Merch and fun stuff.'}
       </p>
       {hasAccessories && (
@@ -36,8 +35,8 @@ const POSPage = () => (
       <section id="accessories" aria-labelledby="accessories-heading">
         <h2 id="accessories-heading" className="section-title">BitAxe cases, plaques and shrouds</h2>
         <p className="section-sub">
-          Built and run on our own miners first. Priced in sats, plus shipping. Order with sats and we’ll confirm the
-          fit and send you an invoice{ACCESSORIES.some((a) => a.squareUrl) ? ', or pay by card through Square' : ''}.
+          Priced in sats, plus shipping. Order with sats and I’ll confirm the fit and send you an invoice
+          {ACCESSORIES.some((a) => a.squareUrl) ? ', or pay by card through Square' : ''}.
         </p>
         <AccessoryCards />
       </section>
@@ -60,12 +59,12 @@ const POSPage = () => (
         <article className="card">
           <h3>Home Assistant installation</h3>
           <p>Three flat-price packages, $315 to $1,050, installed in your home. No subscription.</p>
-          <Link to="/home-assistant" className="card-link">See packages →</Link>
+          <Link to="/home-assistant" className="card-link">See the packages</Link>
         </article>
         <article className="card">
           <h3>Bitcoin mining heaters</h3>
           <p>Nano 3S, BitAxe, Antminer S9, S19 and S21, set up for home heating. Ships within the US.</p>
-          <Link to="/bitcoin-heaters" className="card-link">Browse heaters →</Link>
+          <Link to="/bitcoin-heaters" className="card-link">Browse the heaters</Link>
         </article>
       </div>
     </section>

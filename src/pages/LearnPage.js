@@ -12,11 +12,10 @@ const LearnPage = () => (
     />
 
     <section className="hero hero-sm">
-      <p className="eyebrow">Free resources</p>
       <h1>Learn bitcoin mining, heat reuse and home automation</h1>
       <p className="lead">
-        Everything here is free to read, share and teach from. The goal is more people mining at home, putting the
-        heat to use, and running their own homes without the cloud.
+        Everything here is free to read, share and teach from. I wrote it to get more people mining at home, using
+        the heat, and running their houses without the cloud.
       </p>
     </section>
 
@@ -30,14 +29,13 @@ const LearnPage = () => (
               <Link to={`/learn/${a.slug}`}>{a.title}</Link>
             </h3>
             <p>{a.description}</p>
-            <Link to={`/learn/${a.slug}`} className="card-link" aria-label={`Read: ${a.title}`}>Read →</Link>
+            <Link to={`/learn/${a.slug}`} className="card-link" aria-label={`Read: ${a.title}`}>Read</Link>
           </article>
         ))}
       </div>
     </section>
 
     <section className="panel feature" aria-labelledby="hearth">
-      <p className="eyebrow">Interactive tool</p>
       <h2 id="hearth">Hashrate Hearth</h2>
       <p>
         Two pool operators build most of bitcoin’s block templates. How much home mining would it take to break that
@@ -58,13 +56,13 @@ const LearnPage = () => (
       <h2 id="play">Rather learn by playing?</h2>
       <p>
         Games and goofy tools that show how Bitcoin and decentralization work, from Battleship to Space Invaders running
-        on live mempool data. <Link to="/fun">Play →</Link>
+        on live mempool data. <Link to="/fun">Play the games</Link>.
       </p>
     </section>
 
     <CtaBand
       heading="Rather have someone set it up for you?"
-      text="We install Home Assistant and mining heaters in person around Greater Cincinnati, for one flat price."
+      text="I install Home Assistant and mining heaters in person around Greater Cincinnati, for one flat price."
     />
   </div>
 );

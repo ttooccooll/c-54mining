@@ -20,7 +20,7 @@ const AREAS = [
 
 const EMPTY = { name: '', email: '', area: '', interest: '', devices: '', message: '' };
 
-// With a Web3Forms key the form posts straight to our inbox; without one it opens
+// With a Web3Forms key the form posts straight to the inbox; without one it opens
 // the visitor's email app.
 const USE_SERVICE = Boolean(SITE.web3formsKey);
 const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
@@ -127,7 +127,9 @@ const ContactPage = () => {
       <section className="hero hero-sm">
         <h1>Get a free quote</h1>
         <p className="lead">
-          Tell us about your home and what you want it to do. We’ll reply with a flat price. No sales call, no pressure, and no account to create.
+          Tell me about your home and what you want it to do. I’ll reply by email within {SITE.replyTime} with a flat
+          price, or a question or two if I need to know more. I won’t call you: this form doesn’t ask for a phone
+          number.
         </p>
       </section>
 
@@ -179,12 +181,14 @@ const ContactPage = () => {
           </button>
           <p className="muted small">
             {USE_SERVICE
-              ? 'Goes straight to our inbox. We only use your details to reply to you.'
+              ? 'This goes straight to my inbox. I use your details to reply to you and for nothing else.'
               : 'This opens your email app with everything filled in. Nothing is stored on this site.'}
           </p>
           <div role="status" aria-live="polite">
             {status === 'sent' && (
-              <p className="notice">Thanks! Your request is in our inbox, and we’ll reply by email.</p>
+              <p className="notice">
+                Thanks. Your request is in my inbox, and I’ll reply by email within {SITE.replyTime}.
+              </p>
             )}
             {status === 'error' && (
               <p className="notice notice-error">
@@ -197,14 +201,20 @@ const ContactPage = () => {
             )}
             {status === 'mailto' && (
               <p className="notice">
-                If your email app didn’t open, write to us directly at <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+                If your email app didn’t open, write to me directly at <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
               </p>
             )}
           </div>
         </form>
 
         <aside className="panel">
-          <h2>Other ways to reach us</h2>
+          <h2>What happens next</h2>
+          <ol className="small-steps">
+            <li>I reply within {SITE.replyTime} with a flat price, or with questions if I have any.</li>
+            <li>We pick an install date that works for you.</li>
+            <li>You pay once. Nothing renews.</li>
+          </ol>
+          <h3>Other ways to reach me</h3>
           <p>
             Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
           </p>
@@ -219,13 +229,7 @@ const ContactPage = () => {
           </p>
           <p className="npub small muted">{SITE.nostr.npub}</p>
           <h3>Service area</h3>
-          <p>In-person installs across {SITE.areaSummary}. Bitcoin heaters ship anywhere in the US.</p>
-          <h3>What happens next</h3>
-          <ol className="small-steps">
-            <li>We reply with questions, if any, and a flat price.</li>
-            <li>We pick an install date that works for you.</li>
-            <li>You pay once. There’s never a monthly bill.</li>
-          </ol>
+          <p>I install in person across {SITE.areaSummary}. Bitcoin heaters ship anywhere in the US.</p>
         </aside>
       </div>
     </div>

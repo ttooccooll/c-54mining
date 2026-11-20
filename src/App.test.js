@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
-import { ROUTES } from './content/site';
+import { HEATER_FAQ, ROUTES, SITE } from './content/site';
 
 const renderAt = (path) =>
   render(
@@ -10,9 +10,10 @@ const renderAt = (path) =>
     </MemoryRouter>
   );
 
-test('home page leads with the no-subscription promise and a quote CTA', () => {
+test('home page leads with the no-subscription promise, a named person and a quote CTA', () => {
   renderAt('/');
   expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(/no monthly fees/i);
+  expect(screen.getByText(new RegExp(`I’m ${SITE.owner}\\.`))).toBeInTheDocument();
   expect(screen.getAllByRole('link', { name: /get a free quote/i }).length).toBeGreaterThan(0);
 });
 
@@ -65,13 +66,34 @@ test('with a Web3Forms key, the quote form sends in-page and confirms', async ()
     );
     expect(rtl.screen.getByRole('button', { name: /send my request/i })).toBeInTheDocument();
     rtl.fireEvent.submit(container.querySelector('form.quote-form'));
-    expect(await rtl.screen.findByText(/your request is in our inbox/i)).toBeInTheDocument();
+    expect(await rtl.screen.findByText(/your request is in my inbox/i)).toBeInTheDocument();
     const [url, opts] = global.fetch.mock.calls[0];
     expect(url).toBe('https://api.web3forms.com/submit');
     expect(JSON.parse(opts.body)).toMatchObject({ access_key: 'test-key' });
     rtl.cleanup();
   } finally {
     global.fetch = realFetch;
+  }
+});
+
+test('quote page promises the reply time set in site.js', () => {
+  renderAt('/contact');
+  expect(screen.getAllByText(new RegExp(`within ${SITE.replyTime}`)).length).toBeGreaterThan(0);
+});
+
+test('heaters page answers the buying questions and shows heat output', () => {
+  renderAt('/bitcoin-heaters');
+  for (const { q } of HEATER_FAQ) {
+    expect(screen.getByText(q)).toBeInTheDocument();
+  }
+  expect(screen.getByText('About 4,400 BTU/h')).toBeInTheDocument();
+});
+
+test('pages speak in the first person, not as "we"', () => {
+  for (const path of ROUTES) {
+    const { container, unmount } = renderAt(path);
+    expect(container.textContent).not.toMatch(/\b(we’ll|we’re|we’ve|our)\b/i);
+    unmount();
   }
 });
 

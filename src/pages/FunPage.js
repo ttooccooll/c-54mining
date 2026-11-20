@@ -47,7 +47,6 @@ const FunPage = () => (
       path="/fun"
     />
     <section className="hero hero-sm">
-      <p className="eyebrow">Fun stuff</p>
       <h1>Goofy learning tools and (loosely) educational games</h1>
       <p className="lead">Here is some fun stuff to play with.</p>
     </section>
@@ -57,7 +56,7 @@ const FunPage = () => (
           <a key={g.href} href={g.href} className="card card-play" target="_blank" rel="noopener noreferrer">
             <h2 className="card-title">{g.title}</h2>
             <p>{g.text}</p>
-            <span className="card-link">Open →</span>
+            <span className="card-link">Open</span>
           </a>
         ))}
       </div>
